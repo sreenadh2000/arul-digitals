@@ -1,0 +1,848 @@
+@use "sass:color";
+
+/////////////////////////
+/////////// Common css ///////
+/// ////////////////////
+/* ✅ Custom Pagination Dots */
+.swiper-pagination {
+  bottom: -30px !important; // moves dots below images
+  text-align: center;
+  margin: 1rem 0;
+  position: static !important;
+  .swiper-pagination-bullet {
+    background: #1e1d1d;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background: #009688;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #009688; // active color
+    transform: scale(1.3);
+  }
+}
+
+/* ✅ Custom Navigation Arrows */
+
+.swiper-button-next,
+.swiper-button-prev {
+  background: white;
+  border: none;
+  width: 50px !important;
+  height: 50px !important;
+  color: #009688 !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+
+  &:hover {
+    background: #009688;
+    color: white !important;
+    transform: translateY(-5%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 150, 136, 0.3);
+  }
+
+  &::after {
+    font-size: 24px !important ; // actual arrow size
+    font-weight: bold;
+  }
+}
+
+// .swiper-button-prev {
+//   left: 15px; // position
+// }
+
+// .swiper-button-next {
+//   right: 15px;
+// }
+
+/* Headers of Pages */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1c3f74;
+    margin-bottom: 1rem;
+    animation: fadeInLeft 0.8s ease-out;
+    @media (max-width: 991px) {
+      margin-bottom: 2.5rem;
+      font-size: 2.5rem;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+  }
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Home Page Styles
+.home-page {
+  // Hero Section
+  .hero-section {
+    background: #567ab1;
+    padding: 100px 0;
+    position: relative;
+    // Diagonal curve background
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        135deg,
+        #567ab1 0%,
+        #567ab1 45%,
+        #1c3f74 55%,
+        #1c3f74 100%
+      );
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      pointer-events: none;
+    }
+
+    // Add subtle pattern overlay
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: radial-gradient(
+          circle at 25% 25%,
+          rgba(255, 255, 255, 0.1) 0%,
+          transparent 50%
+        ),
+        radial-gradient(
+          circle at 75% 75%,
+          rgba(255, 255, 255, 0.05) 0%,
+          transparent 50%
+        );
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero-content {
+      color: white;
+
+      .hero-title {
+        font-size: 3.5rem;
+        font-weight: 900;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        animation: fadeInLeft 0.8s ease-out;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        color: rgba(255, 255, 255, 0.9);
+        animation: fadeInLeft 0.8s ease-out 0.2s both;
+      }
+
+      .btn-order-now {
+        background: linear-gradient(135deg, #009688, #00796b);
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        color: white;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        animation: fadeInLeft 0.8s ease-out 0.4s both;
+
+        &:hover {
+          background: linear-gradient(135deg, #00796b, #004d40);
+          transform: translateY(-3px);
+          box-shadow: 0 10px 30px rgba(0, 150, 136, 0.4);
+          color: white;
+        }
+
+        &:active {
+          transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+          margin: 0 auto;
+          display: flex;
+        }
+      }
+    }
+
+    .hero-images {
+      position: relative;
+      animation: fadeInRight 0.8s ease-out;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  // Products Section
+  .products-section {
+    padding: 100px 0;
+    background: #f8f9fa;
+    .products-carousel {
+      position: relative;
+      width: 95%;
+      .swiper-slide {
+        margin: 5% 0;
+        .product-card {
+          background: white;
+          cursor: pointer;
+          border-radius: 15px;
+          height: 24rem;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+          }
+
+          .product-image {
+            height: 200px;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.3s ease;
+            }
+          }
+
+          &:hover .product-image img {
+            transform: scale(1.05);
+          }
+
+          .product-content {
+            padding: 1.5rem;
+
+            .product-name {
+              font-size: 1.25rem;
+              font-weight: 600;
+              color: #1c3f74;
+              margin-bottom: 0.75rem;
+            }
+
+            .product-description {
+              color: #666;
+              line-height: 1.5;
+              margin-bottom: 1.5rem;
+              font-size: 0.95rem;
+            }
+
+            .btn-get-now {
+              background: linear-gradient(135deg, #009688, #00796b);
+              border: none;
+              padding: 0.75rem 1.5rem;
+              border-radius: 25px;
+              color: white;
+              font-weight: 600;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              transition: all 0.3s ease;
+              text-decoration: none;
+
+              &:hover {
+                background: linear-gradient(135deg, #00796b, #004d40);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(0, 150, 136, 0.4);
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Impact Section
+  .impact-section {
+    padding: 100px 0;
+    background: white;
+
+    .impact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding: 2rem;
+      background: #f8f9fa;
+      border-radius: 15px;
+      height: 100%;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+      }
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .impact-icon {
+        color: #009688;
+        background: rgba(0, 150, 136, 0.1);
+        padding: 1rem;
+        border-radius: 15px;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+      }
+
+      &:hover .impact-icon {
+        background: #009688;
+        color: white;
+        transform: scale(1.1);
+      }
+
+      .impact-content {
+        .impact-title {
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: #1c3f74;
+          margin-bottom: 0.75rem;
+        }
+
+        .impact-description {
+          color: #666;
+          line-height: 1.6;
+          margin: 0;
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+}
+/////////////////////////////////////
+// Machine Swiper ///
+///////////////////////////////////
+.machine-swiper {
+  position: relative;
+  margin: 2% 3% 5% 3%;
+  .image-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05); // slight zoom on hover
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: -100%; // start hidden below
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: bottom 0.4s ease;
+    }
+
+    &:hover .overlay {
+      bottom: 0; // animate upwards
+    }
+  }
+}
+/////////////////////////////////////
+// Brand Swiper ///
+///////////////////////////////////
+.brand-choose {
+  padding: 100px 0;
+  background: white;
+  .brand-swiper {
+    position: relative;
+    .image-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+}
+/////////////////////////////////////
+// Video Section ///
+///////////////////////////////////
+.video-section {
+  padding: 50px 0 100px 0;
+  background: white;
+
+  .video-container {
+    position: relative;
+
+    .video-wrapper {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+
+      .video-thumbnail {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.4);
+        }
+
+        .play-button {
+          background: rgba(255, 255, 255, 0.9);
+          border: none;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #1c3f74;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: white;
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+          }
+
+          svg {
+            margin-left: 4px; // Slight offset for play icon
+          }
+        }
+      }
+    }
+  }
+
+  .video-content {
+    padding-left: 2rem;
+
+    @media (max-width: 991px) {
+      padding-left: 0;
+      margin-top: 3rem;
+      // text-align: center;
+    }
+
+    .video-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1c3f74;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    .video-description {
+      font-size: 1.1rem;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2.5rem;
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .feature-icon {
+          background: #009688;
+          color: white;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          box-shadow: 0 2px 8px rgba(0, 150, 136, 0.3);
+        }
+
+        .feature-text {
+          color: #666;
+          font-size: 0.95rem;
+          line-height: 1.4;
+        }
+      }
+    }
+
+    .btn-learn-more {
+      background: linear-gradient(135deg, #009688, #5594a7);
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+
+      &:hover {
+        background: linear-gradient(135deg, #5594a7, #009688);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(28, 63, 116, 0.4);
+        color: white;
+      }
+
+      &:active {
+        transform: translateY(-1px);
+      }
+    }
+  }
+}
+/////////////////////////////////////
+// Whats New Section ///
+///////////////////////////////////
+.what-new-section {
+  margin: 100px auto;
+  width: 80%;
+
+  .product-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin: 0 1rem;
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+    .product-image {
+      height: 200px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &:hover .product-image img {
+      transform: scale(1.05);
+    }
+
+    .product-content {
+      padding: 1.5rem;
+
+      .product-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1c3f74;
+        margin-bottom: 0.75rem;
+      }
+
+      .btn-get-now {
+        background: linear-gradient(135deg, #009688, #00796b);
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        color: white;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+        text-decoration: none;
+
+        &:hover {
+          background: linear-gradient(135deg, #00796b, #004d40);
+          transform: translateY(-2px);
+          box-shadow: 0 8px 25px rgba(0, 150, 136, 0.4);
+          color: white;
+        }
+      }
+    }
+  }
+}
+/////////////////////////////////////
+// Reviews New Section ///
+///////////////////////////////////
+.review-section {
+  background: linear-gradient(to right, #ffffff, #8e95a1);
+  padding: 100px auto;
+  .container {
+    .section-header {
+      padding-top: 4rem;
+    }
+    .review-container-top {
+      padding: 0 0 10% 0;
+    }
+    .review-container {
+      width: 50%;
+      .review-card {
+        padding: 2rem;
+        cursor: pointer;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        background: white;
+        p {
+          font-style: italic;
+          font-weight: 400;
+        }
+        h5 {
+          font-weight: 900;
+        }
+        .working {
+          color: #b34440;
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 991px) {
+  /// common Items ////
+  /* ✅ Custom Navigation Arrows */
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px !important;
+    height: 40px !important;
+
+    &::after {
+      font-size: 18px !important ; // actual arrow size
+    }
+  }
+
+  /// Main changes ///
+
+  .home-page {
+    .hero-section {
+      padding: 80px 0;
+      .hero-content {
+        text-align: center;
+        .hero-title {
+          margin-top: 1.5rem;
+          font-size: 2.5rem;
+          text-align: center;
+        }
+        .hero-description {
+          font-size: 1rem;
+          text-align: center;
+          line-height: 1.6;
+        }
+      }
+    }
+
+    .products-section {
+      .impact-section {
+        padding: 80px 0;
+      }
+      .product-card {
+        height: 26rem !important;
+      }
+    }
+    .impact-section {
+      padding: 0;
+    }
+    .brand-choose {
+      padding: 100px 0 50px 0;
+      .section-header {
+        .section-title {
+          font-size: 2rem;
+        }
+      }
+    }
+    .video-section {
+      padding: 0 0 100px 0;
+      .video-content {
+        margin-bottom: 5%;
+        .btn-learn-more {
+          margin: 0 auto;
+          display: flex;
+        }
+      }
+    }
+    .review-section {
+      .container {
+        .review-container {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  /// common Items ////
+  /* ✅ Custom Navigation Arrows */
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 35px !important;
+    height: 35px !important;
+
+    &::after {
+      font-size: 16px !important ; // actual arrow size
+    }
+  }
+  //// Main changes ///
+  .home-page {
+    .hero-section {
+      padding: 60px 0;
+
+      .hero-images {
+        margin-bottom: 3rem;
+
+        .image-scroller .image-slide img {
+          height: 300px;
+        }
+      }
+    }
+
+    .products-section {
+      padding: 60px 0;
+
+      .product-card {
+        height: 28rem !important;
+      }
+    }
+    .impact-section {
+      .row {
+        .col-12 {
+          margin-bottom: 1.5rem !important;
+
+          &:last-child {
+            margin-bottom: 0 !important;
+          }
+        }
+      }
+    }
+    .machine-swiper {
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none;
+      }
+    }
+    .brand-choose {
+      .section-header {
+        margin-bottom: 2rem;
+        .section-title {
+          font-size: 1.75rem;
+        }
+      }
+    }
+    .video-section {
+      padding: 0 0 100px 2%;
+    }
+    .review-section {
+      .container {
+        .review-container {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
