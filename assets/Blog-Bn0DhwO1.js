@@ -1,1 +1,0 @@
-import{j as t}from"./index-VJwfvmVN.js";import{H as o}from"./HeroSection-DYT9tD3n.js";function s(r){return t.jsx("div",{children:t.jsx(o,{title:"BLOG & ARTICLE",navText:"Blog"})})}export{s as default};

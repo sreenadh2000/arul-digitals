@@ -1,0 +1,1 @@
+import{j as t}from"./index-0aeYDAV8.js";import{H as o}from"./HeroSection-C0XxQZr4.js";function i(){return t.jsx("div",{children:t.jsx(o,{title:"PRINTING & BRANDING",navText:"Shop"})})}export{i as default};
