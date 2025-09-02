@@ -56,14 +56,6 @@
   }
 }
 
-// .swiper-button-prev {
-//   left: 15px; // position
-// }
-
-// .swiper-button-next {
-//   right: 15px;
-// }
-
 /* Headers of Pages */
 .section-header {
   text-align: center;
@@ -644,39 +636,39 @@
 /////////////////////////////////////
 // Reviews New Section ///
 ///////////////////////////////////
-.review-section {
-  background: linear-gradient(to right, #ffffff, #8e95a1);
-  padding: 100px auto;
-  .container {
-    .section-header {
-      padding-top: 4rem;
-    }
-    .review-container-top {
-      padding: 0 0 10% 0;
-    }
-    .review-container {
-      width: 50%;
-      .review-card {
-        padding: 2rem;
-        cursor: pointer;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-        background: white;
-        p {
-          font-style: italic;
-          font-weight: 400;
-        }
-        h5 {
-          font-weight: 900;
-        }
-        .working {
-          color: #b34440;
-        }
-      }
-    }
-  }
-}
+// .review-section {
+//   background: linear-gradient(to right, #ffffff, #8e95a1);
+//   padding: 100px auto;
+//   .container {
+//     .section-header {
+//       padding-top: 4rem;
+//     }
+//     .review-container-top {
+//       padding: 0 0 10% 0;
+//     }
+//     .review-container {
+//       width: 50%;
+//       .review-card {
+//         padding: 2rem;
+//         cursor: pointer;
+//         border-radius: 15px;
+//         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+//         transition: all 0.3s ease;
+//         background: white;
+//         p {
+//           font-style: italic;
+//           font-weight: 400;
+//         }
+//         h5 {
+//           font-weight: 900;
+//         }
+//         .working {
+//           color: #b34440;
+//         }
+//       }
+//     }
+//   }
+// }
 
 // Responsive Design
 @media (max-width: 991px) {
@@ -742,14 +734,14 @@
         }
       }
     }
-    .review-section {
-      .container {
-        .review-container {
-          width: 80%;
-        }
-      }
-    }
   }
+  // .review-section {
+  //   .container {
+  //     .review-container {
+  //       width: 80%;
+  //     }
+  //   }
+  // }
 }
 
 @media (max-width: 767px) {
@@ -814,14 +806,14 @@
     .video-section {
       padding: 0 0 100px 2%;
     }
-    .review-section {
-      .container {
-        .review-container {
-          margin: 0 auto;
-        }
-      }
-    }
   }
+  // .review-section {
+  //   .container {
+  //     .review-container {
+  //       margin: 0 auto;
+  //     }
+  //   }
+  // }
 }
 
 // Animations

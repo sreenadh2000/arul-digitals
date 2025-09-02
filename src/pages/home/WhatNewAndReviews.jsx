@@ -1,29 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { ArrowRight } from "lucide-react";
-const CustomerReviews = [
-  {
-    id: 1,
-    review:
-      "They are fast and very good service we got from them.  Cost effective and Manjunath and Charan are very good.  They will deliver within 3 hours to our door step",
-    name: "Satya Nadella",
-    working: "Microsoft",
-  },
-  {
-    id: 2,
-    review:
-      "Quality service, timely delivery & Mr Manjunath is very soft spoken & attends to the work perfectly. Mr Chand understands what the customer needs & does the work accordingly. Overall wonderful experience",
-    name: "Anand Mahendra",
-    working: "Tech Mahindra",
-  },
-  {
-    id: 3,
-    review:
-      "Customer friendly! Pocket friendly! Go to place for any sort of printing",
-    name: "Elon Musk",
-    working: "Tesla",
-  },
-];
+import Reviews from "./Reviews";
 const whatsNewImages = [
   {
     id: 1,
@@ -111,7 +89,8 @@ export default function WhatNewAndReviews(params) {
           ))}
         </Swiper>
       </section>
-      <section className="review-section">
+      <Reviews />
+      {/* <section className="review-section">
         <div className="container">
           <div className="section-header">
             <h2 className="section-title">What Customer Says</h2>
@@ -143,7 +122,7 @@ export default function WhatNewAndReviews(params) {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

@@ -1,0 +1,229 @@
+/////////// Common Scss //////////
+// ***********
+// Headers of Pages
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1c3f74;
+    margin-bottom: 1rem;
+    animation: fadeInLeft 0.8s ease-out;
+    @media (max-width: 991px) {
+      margin-bottom: 2.5rem;
+      font-size: 2.5rem;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+  }
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/////////// Section Scss /////////////
+/// **********
+
+// Our Story
+.our-jorney {
+  .container {
+    padding: 100px 0;
+    width: 100%;
+    background: white;
+
+    .image-container {
+      .image-wrapper {
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.02);
+        }
+
+        .shop-image {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+          display: block;
+        }
+      }
+    }
+    .jouney-content {
+      h4 {
+        font-size: 2rem;
+        font-weight: 500;
+        color: #1c3f74;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+      p {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+// Our Sevices
+.our-services {
+  padding: 100px 0;
+
+  .service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    height: 100%;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: white;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transform: translateY(-5px);
+    }
+    @media (max-width: 767px) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+    .service-icon {
+      color: #009688;
+      background: rgba(0, 150, 136, 0.1);
+      padding: 1rem;
+      border-radius: 15px;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+    &:hover .service-icon {
+      background: #009688;
+      color: white;
+      transform: scale(1.1);
+    }
+    .service-content {
+      .service-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1c3f74;
+        margin-bottom: 0.75rem;
+      }
+
+      .service-description {
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+        font-size: 0.95rem;
+      }
+    }
+  }
+}
+// Our Founder
+.founder-section {
+  padding: 0 0 100px 0;
+  position: relative;
+  overflow: hidden;
+  // new changes
+  width: 100%;
+  height: 100%;
+  .section-header .section-title {
+    margin-top: 4rem;
+    position: relative;
+    color: #fff;
+  }
+  .row {
+    z-index: 1;
+    position: relative;
+  }
+  .founder-img {
+    height: 450px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+  }
+  .details {
+    h4 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #ffc107;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 500;
+      //  color: #666;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+  }
+}
+.founder-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #004d83; /* bottom color */
+  clip-path: ellipse(120% 95% at 50% 100%);
+  /* ellipse curve starting from bottom */
+  z-index: 0;
+}
+
+/////////////////  Responsive Design /////////////
+@media (max-width: 991px) {
+  //// Main scss /////
+  // Our Story
+  .our-jorney {
+    .container {
+      padding: 80px 0;
+      .jouney-content {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+  .review-section {
+    .review-container {
+      text-align: center;
+    }
+  }
+  // Our Sevices
+}
+
+@media (max-width: 767px) {
+  //// Main scss /////
+  // Our Story
+  .our-jorney {
+    .container {
+      padding: 60px 0;
+      margin: 0 auto;
+      width: 90%;
+      .image-wrapper {
+        margin-bottom: 0 5% 2% 5%;
+      }
+    }
+  }
+  // Our Sevices
+  // Our Founder
+  .founder-section {
+    padding: 0 0 60px 0;
+    .section-header .section-title {
+      padding-top: 4rem;
+    }
+    .details {
+      margin: 2rem 2% 0 2%;
+      h4 {
+        font-size: 2rem;
+      }
+    }
+    .founder-img {
+      height: 300px;
+    }
+  }
+}

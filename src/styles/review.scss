@@ -1,0 +1,106 @@
+/* ✅ Custom Pagination Dots */
+.swiper-pagination {
+  bottom: -30px !important; // moves dots below images
+  text-align: center;
+  margin: 1rem 0;
+  position: static !important;
+  .swiper-pagination-bullet {
+    background: #1e1d1d;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background: #009688;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #009688; // active color
+    transform: scale(1.3);
+  }
+}
+/* Headers of Pages */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1c3f74;
+    margin-bottom: 1rem;
+    animation: fadeInLeft 0.8s ease-out;
+    @media (max-width: 991px) {
+      margin-bottom: 2.5rem;
+      font-size: 2.5rem;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+  }
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+/////////////////////////////////////
+// Reviews New Section ///
+///////////////////////////////////
+.review-section {
+  background: linear-gradient(to right, #ffffff, #8e95a1);
+  padding: 100px auto;
+  .container {
+    .section-header {
+      padding-top: 4rem;
+    }
+    .review-container-top {
+      padding: 0 0 10% 0;
+    }
+    .review-container {
+      width: 50%;
+      .review-card {
+        padding: 2rem;
+        cursor: pointer;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        background: white;
+        p {
+          font-style: italic;
+          font-weight: 400;
+        }
+        h5 {
+          font-weight: 900;
+        }
+        .working {
+          color: #b34440;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .review-section {
+    .container {
+      .review-container {
+        width: 80%;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .review-section {
+    .container {
+      .review-container {
+        margin: 0 auto;
+      }
+    }
+  }
+}
