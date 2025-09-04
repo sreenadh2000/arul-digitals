@@ -437,12 +437,12 @@ $transition-duration: 0.3s;
   width: 100%;
   .map-overlay {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 30px;
+    left: 30px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 400;
     h4 {
       font-size: 1rem;
     }
@@ -754,7 +754,7 @@ $transition-duration: 0.3s;
   /// ///////////////////////
   .custom-navbar {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     .navbar-nav {
       position: fixed;
       top: 0;
@@ -826,9 +826,6 @@ $transition-duration: 0.3s;
         margin-bottom: 2rem;
       }
     }
-  }
-  .map-section {
-    height: 400px;
   }
 
   ////////////////////////////
@@ -931,9 +928,6 @@ $transition-duration: 0.3s;
         }
       }
     }
-  }
-  .map-section {
-    height: 300px;
   }
   ////////////////////////////
   /// // Shop Page styles

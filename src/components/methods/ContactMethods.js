@@ -28,7 +28,7 @@ const openGoogleMaps = () => {
 };
 
 const sendEmail = () => {
-  const email = "yourmail@example.com";
+  const email = "puranamharsha@gmail.com.com";
   const subject = encodeURIComponent("Inquiry about Printing Services");
   const body = encodeURIComponent(
     "Hello, I would like to know more about your printing solutions."
