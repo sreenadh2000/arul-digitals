@@ -1,0 +1,1 @@
+import{j as t}from"./index-Bkp-UsuS.js";import{H as o}from"./HeroSection-CaymTJ7O.js";function s(r){return t.jsx("div",{children:t.jsx(o,{title:"BLOG & ARTICLE",navText:"Blog"})})}export{s as default};
