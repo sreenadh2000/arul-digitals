@@ -1,88 +1,4 @@
-@use "sass:color";
-
-/////////////////////////
-/////////// Common css ///////
-/// ////////////////////
-/* ✅ Custom Pagination Dots */
-.swiper-pagination {
-  bottom: -30px !important; // moves dots below images
-  text-align: center;
-  margin: 1rem 0;
-  position: static !important;
-  .swiper-pagination-bullet {
-    background: #1e1d1d;
-    opacity: 1;
-    width: 12px;
-    height: 12px;
-    margin: 0 6px;
-    transition: background 0.3s ease, transform 0.3s ease;
-
-    &:hover {
-      background: #009688;
-    }
-  }
-
-  .swiper-pagination-bullet-active {
-    background: #009688; // active color
-    transform: scale(1.3);
-  }
-}
-
-/* ✅ Custom Navigation Arrows */
-
-.swiper-button-next,
-.swiper-button-prev {
-  background: white;
-  border: none;
-  width: 50px !important;
-  height: 50px !important;
-  color: #009688 !important;
-  border-radius: 50%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 10;
-
-  &:hover {
-    background: #009688;
-    color: white !important;
-    transform: translateY(-5%) scale(1.1);
-    box-shadow: 0 6px 20px rgba(0, 150, 136, 0.3);
-  }
-
-  &::after {
-    font-size: 24px !important ; // actual arrow size
-    font-weight: bold;
-  }
-}
-
-/* Headers of Pages */
-.section-header {
-  text-align: center;
-  margin-bottom: 4rem;
-
-  .section-title {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #1c3f74;
-    margin-bottom: 1rem;
-    animation: fadeInLeft 0.8s ease-out;
-    @media (max-width: 991px) {
-      margin-bottom: 2.5rem;
-      font-size: 2.5rem;
-    }
-    @media (max-width: 768px) {
-      margin-bottom: 1rem;
-      font-size: 2rem;
-    }
-  }
-  .section-subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-}
+// @use "sass:color";
 
 // Home Page Styles
 .home-page {
@@ -675,21 +591,30 @@
   /// common Items ////
   /* ✅ Custom Navigation Arrows */
 
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 40px !important;
-    height: 40px !important;
+  // .swiper-button-next,
+  // .swiper-button-prev {
+  //   width: 40px !important;
+  //   height: 40px !important;
 
-    &::after {
-      font-size: 18px !important ; // actual arrow size
+  //   &::after {
+  //     font-size: 18px !important ; // actual arrow size
+  //   }
+  // }
+  .swiper-pagination {
+    bottom: -30px !important; // moves dots below images
+    .swiper-pagination-bullet {
+      width: 9px !important;
+      height: 9px !important;
     }
   }
-
   /// Main changes ///
 
   .home-page {
     .hero-section {
       padding: 80px 0;
+      .hero-images {
+        margin-top: 3rem;
+      }
       .hero-content {
         text-align: center;
         .hero-title {
@@ -735,26 +660,15 @@
       }
     }
   }
-  // .review-section {
-  //   .container {
-  //     .review-container {
-  //       width: 80%;
-  //     }
-  //   }
-  // }
 }
 
 @media (max-width: 767px) {
   /// common Items ////
-  /* ✅ Custom Navigation Arrows */
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 35px !important;
-    height: 35px !important;
-
-    &::after {
-      font-size: 16px !important ; // actual arrow size
+  .swiper-pagination {
+    bottom: -30px !important; // moves dots below images
+    .swiper-pagination-bullet {
+      width: 7px !important;
+      height: 7px !important;
     }
   }
   //// Main changes ///
@@ -777,6 +691,10 @@
       .product-card {
         height: 28rem !important;
       }
+      .swiper-button-next,
+      .swiper-button-prev {
+        top: 40%;
+      }
     }
     .impact-section {
       .row {
@@ -796,6 +714,7 @@
       }
     }
     .brand-choose {
+      padding: 60px 0 0 0;
       .section-header {
         margin-bottom: 2rem;
         .section-title {
@@ -804,16 +723,9 @@
       }
     }
     .video-section {
-      padding: 0 0 100px 2%;
+      padding: 0 0 0 2%;
     }
   }
-  // .review-section {
-  //   .container {
-  //     .review-container {
-  //       margin: 0 auto;
-  //     }
-  //   }
-  // }
 }
 
 // Animations

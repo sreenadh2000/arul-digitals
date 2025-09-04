@@ -1,7 +1,6 @@
 @use "sass:color";
 
 /// // Custom variables
-// $navbar-bg: #203e6c;
 $navbar-bg: #004d83;
 $active-color: #009688;
 $text-color: #ffffff;
@@ -26,7 +25,6 @@ $transition-duration: 0.3s;
     cursor: pointer;
 
     &:hover {
-      //   background-color: darken($active-color, 10%);
       background-color: color.adjust($active-color, $lightness: -10%);
       color: $hover-color;
       transform: translateY(-2px);
@@ -36,6 +34,86 @@ $transition-duration: 0.3s;
     &:active {
       transform: translateY(0);
     }
+  }
+}
+
+/* Headers of Pages */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1c3f74;
+    margin-bottom: 1rem;
+    animation: fadeInLeft 0.8s ease-out;
+    @media (max-width: 991px) {
+      margin-bottom: 2.5rem;
+      font-size: 2.5rem;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+  }
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+/* ✅ Custom Pagination Dots */
+.swiper-pagination {
+  bottom: -30px !important; // moves dots below images
+  text-align: center;
+  margin: 1rem 0;
+  position: static !important;
+  .swiper-pagination-bullet {
+    background: #1e1d1d;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background: #009688;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #009688; // active color
+    transform: scale(1.3);
+  }
+}
+
+/* ✅ Custom Navigation Arrows */
+
+.swiper-button-next,
+.swiper-button-prev {
+  background: white;
+  border: none;
+  width: 50px !important;
+  height: 50px !important;
+  color: #009688 !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+
+  &:hover {
+    background: #009688;
+    color: white !important;
+    transform: translateY(-5%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 150, 136, 0.3);
+  }
+
+  &::after {
+    font-size: 24px !important ; // actual arrow size
+    font-weight: bold;
   }
 }
 ////////////////////////////
@@ -160,7 +238,6 @@ $transition-duration: 0.3s;
 .contact-page {
   .contact-content {
     padding: 80px 0;
-    background-color: #f8f9fa;
 
     .contact-address-card,
     .contact-phone-card,
@@ -172,9 +249,6 @@ $transition-duration: 0.3s;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       height: 100%;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      //   animation: appear linear;
-      //   animation-timeline: view();
-      //   animation-range: entry 0 cover 40%;
       &:hover {
         transform: translateY(-15px);
         box-shadow: 0 10px 30px rgba(58, 60, 60, 0.6);
@@ -219,7 +293,253 @@ $transition-duration: 0.3s;
     }
   }
 }
+.form-section {
+  .form-card {
+    background: white;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+      background: white;
+    }
+    .form-header {
+      color: $navbar-bg;
+      position: relative;
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        position: relative;
+      }
+    }
+    .contact-form {
+      .form-group {
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+      .form-label {
+        font-weight: 600;
+        color: #212529;
+        margin-bottom: 0.5rem;
+        display: block;
+        transition: color 0.3s ease;
+      }
+      .form-control {
+        border: 2px solid rgba(0, 150, 136, 0.25);
+        border-radius: 0.5rem;
+        padding: 0.875rem 1rem;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background-color: #fafbfc;
+
+        &:focus {
+          border-color: $active-color;
+          box-shadow: 0 0 0 0.2rem rgba(0, 150, 136, 0.25);
+          background-color: white;
+          transform: translateY(-1px);
+        }
+
+        &.is-invalid {
+          border-color: #f44336;
+          box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.25);
+        }
+
+        &.is-valid {
+          border-color: #4caf50;
+          box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+        }
+      }
+      textarea.form-control {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .invalid-feedback {
+        display: block;
+        margin-top: 0.25rem;
+        font-size: 0.875rem;
+        color: #f44336;
+        animation: slideIn 0.3s ease;
+      }
+
+      .valid-feedback {
+        display: block;
+        margin-top: 0.25rem;
+        font-size: 0.875rem;
+        color: #4caf50;
+        animation: slideIn 0.3s ease;
+      }
+      .submit-btn {
+        background: linear-gradient(135deg, #009688 0%, #00796b 100%);
+        border: none;
+        color: white;
+        font-weight: 600;
+        padding: 0.875rem 2rem;
+        border-radius: 0.5rem;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 0.75rem 1.5rem rgba(0, 150, 136, 0.4);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+
+        &:disabled {
+          background: #6c757d;
+          cursor: not-allowed;
+          transform: none;
+          box-shadow: none;
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+      .loading-spinner {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 2px solid transparent;
+        border-top: 2px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-right: 0.5rem;
+      }
+      .success-message {
+        background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+        border: 1px solid #4caf50;
+        color: #155724;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-weight: 500;
+        animation: slideIn 0.5s ease;
+      }
+    }
+  }
+}
+.map-section {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  width: 100%;
+  .map-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    h4 {
+      font-size: 1rem;
+    }
+    a {
+      display: inline-block;
+      background: #004d83;
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.5rem;
+    }
+  }
+}
+////////////////////////////
+/// // Shop Page styles
+/// ///////////////////////
+
+.shop-section {
+  padding: 100px 0;
+  .section-header {
+    .section-subtitle {
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+  .shop-container {
+    position: relative;
+    .product-card {
+      background: white;
+      cursor: pointer;
+      border-radius: 15px;
+      height: 24rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-image {
+        height: 200px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+      }
+
+      &:hover .product-image img {
+        transform: scale(1.05);
+      }
+
+      .product-content {
+        padding: 1.5rem;
+
+        .product-name {
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: #1c3f74;
+          margin-bottom: 0.75rem;
+        }
+
+        .product-description {
+          color: #666;
+          line-height: 1.5;
+          margin-bottom: 1.5rem;
+          font-size: 0.95rem;
+        }
+
+        .btn-get-now {
+          background: linear-gradient(135deg, #009688, #00796b);
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border-radius: 25px;
+          color: white;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          transition: all 0.3s ease;
+          text-decoration: none;
+
+          &:hover {
+            background: linear-gradient(135deg, #00796b, #004d40);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 150, 136, 0.4);
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
 ////////////////////////////
 ////// Footer Page styles
 ///////////////////////////
@@ -324,7 +644,7 @@ $transition-duration: 0.3s;
           padding: 0.75rem;
           border-radius: 8px;
           transition: background-color 0.3s ease;
-
+          cursor: pointer;
           &:hover {
             background: rgba(255, 255, 255, 0.05);
           }
@@ -415,16 +735,32 @@ $transition-duration: 0.3s;
 ////////////////////////////////////////////////// Responsive Design (991px) //////////////////////////////////
 @media (max-width: 991px) {
   ////////////////////////////
+  /// // common styles
+  /// ///////////////////////
+  /* ✅ Custom Navigation Arrows */
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px !important;
+    height: 40px !important;
+
+    &::after {
+      font-size: 18px !important ; // actual arrow size
+    }
+  }
+
+  ////////////////////////////
   /// // NavBar Page styles
   /// ///////////////////////
   .custom-navbar {
+    position: fixed;
+    width: 100%;
     .navbar-nav {
       position: fixed;
       top: 0;
       right: -100%;
       width: 280px;
       height: 100vh;
-      // background-color: darken($navbar-bg, 5%);
       background-color: color.adjust($navbar-bg, $lightness: -5%);
       flex-direction: column;
       justify-content: flex-start;
@@ -491,6 +827,20 @@ $transition-duration: 0.3s;
       }
     }
   }
+  .map-section {
+    height: 400px;
+  }
+
+  ////////////////////////////
+  /// // Shop Page styles
+  /// ///////////////////////
+  .shop-section {
+    padding: 80px 0;
+
+    .product-card {
+      height: 26rem !important;
+    }
+  }
   ////////////////////////////
   /// // Footer Page styles
   /// ///////////////////////
@@ -517,8 +867,21 @@ $transition-duration: 0.3s;
 }
 
 ////////////////////////////////////////////////// Responsive Design (576px) //////////////////////////////////
-
 @media (max-width: 576px) {
+  ////////////////////////////
+  /// // common styles
+  /// ///////////////////////
+  /* ✅ Custom Navigation Arrows */
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 35px !important;
+    height: 35px !important;
+
+    &::after {
+      font-size: 16px !important ; // actual arrow size
+    }
+  }
   ////////////////////////////
   /// // NavBar styles
   /// ///////////////////////
@@ -567,6 +930,19 @@ $transition-duration: 0.3s;
           height: 45px;
         }
       }
+    }
+  }
+  .map-section {
+    height: 300px;
+  }
+  ////////////////////////////
+  /// // Shop Page styles
+  /// ///////////////////////
+  .shop-section {
+    padding: 60px 0;
+
+    .product-card {
+      height: 28rem !important;
     }
   }
   ////////////////////////////
@@ -636,21 +1012,6 @@ $transition-duration: 0.3s;
   }
 }
 
-// apear animation
-@keyframes appear {
-  from {
-    // opacity: 0.5;
-    // clip-path: inset(100% 100% 0 0);
-    //  transform: translate(-100px, -100px);
-    scale: 0.5;
-  }
-  to {
-    // opacity: 1;
-    // clip-path: inset(0 0 0 0);
-    // transform: translate(0px, 0px);
-    scale: 1;
-  }
-}
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -659,5 +1020,24 @@ $transition-duration: 0.3s;
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

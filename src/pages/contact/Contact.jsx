@@ -1,10 +1,13 @@
 import HeroSection from "../../components/common/HeroSection";
 import { Phone, Mail, MapPin } from "lucide-react";
+import ContactForm from "./ContactForm";
+import MapView from "./MapView";
 function Contact() {
   return (
     <div className="contact-page">
       {/* Contact hero Section */}
       <HeroSection title={"CONTACT US"} navText={"Contact"} />
+      <ContactForm />
       {/* Contact Content Section */}
       <div className="contact-content">
         <div className="container">
@@ -60,6 +63,8 @@ function Contact() {
           </div>
         </div>
       </div>
+      {/* Map View */}
+      <MapView />
     </div>
   );
 }

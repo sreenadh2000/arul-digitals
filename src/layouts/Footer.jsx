@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import {
   Printer,
@@ -10,6 +9,11 @@ import {
   Twitter,
   Instagram,
 } from "lucide-react";
+import {
+  makeCall,
+  openGoogleMaps,
+  openWebSite,
+} from "../components/methods/ContactMethods";
 
 function Footer() {
   const scrollToTop = () => {
@@ -38,13 +42,25 @@ function Footer() {
                 </p>
 
                 <div className="social-media">
-                  <a href="#" className="social-link" aria-label="Facebook">
+                  <a
+                    href="https://www.facebook.com/sreenadh.bathalakuri/"
+                    className="social-link"
+                    aria-label="Facebook"
+                  >
                     <Facebook size={20} />
                   </a>
-                  <a href="#" className="social-link" aria-label="Twitter">
+                  <a
+                    href="https://x.com/SBathalaku89795"
+                    className="social-link"
+                    aria-label="Twitter"
+                  >
                     <Twitter size={20} />
                   </a>
-                  <a href="#" className="social-link" aria-label="Instagram">
+                  <a
+                    href="https://www.instagram.com/harshapuranam/"
+                    className="social-link"
+                    aria-label="Instagram"
+                  >
                     <Instagram size={20} />
                   </a>
                 </div>
@@ -67,7 +83,7 @@ function Footer() {
                     </div>
                   </div>
 
-                  <div className="office-item">
+                  <div className="office-item" onClick={() => openGoogleMaps()}>
                     <div className="office-icon">
                       <MapPin size={18} />
                     </div>
@@ -79,7 +95,7 @@ function Footer() {
                     </div>
                   </div>
 
-                  <div className="office-item">
+                  <div className="office-item" onClick={() => openWebSite()}>
                     <div className="office-icon">
                       <Globe size={18} />
                     </div>
@@ -89,7 +105,7 @@ function Footer() {
                     </div>
                   </div>
 
-                  <div className="office-item">
+                  <div className="office-item" onClick={() => makeCall()}>
                     <div className="office-icon">
                       <Phone size={18} />
                     </div>
@@ -123,13 +139,13 @@ function Footer() {
                   >
                     About Us
                   </Link>
-                  <Link
+                  {/* <Link
                     to="/blog"
                     className="footer-link"
                     onClick={() => scrollToTop()}
                   >
                     Services
-                  </Link>
+                  </Link> */}
                   <Link
                     to="/shop"
                     className="footer-link"

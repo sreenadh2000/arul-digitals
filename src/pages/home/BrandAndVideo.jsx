@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { ArrowRight, Check, Play } from "lucide-react";
+import { openWhatsApp } from "../../components/methods/ContactMethods";
 const images = [
   { id: 1, src: "https://picsum.photos/600/400?random=1", text: "Image One" },
   { id: 2, src: "https://picsum.photos/600/400?random=2", text: "Image Two" },
@@ -91,7 +92,11 @@ export default function BrandAndVideo(params) {
                   ))}
                 </ul>
 
-                <button type="button" className="btn btn-learn-more">
+                <button
+                  type="button"
+                  className="btn btn-learn-more"
+                  onClick={() => openWhatsApp()}
+                >
                   Learn More About Us
                   <ArrowRight size={18} />
                 </button>

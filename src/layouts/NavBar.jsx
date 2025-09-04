@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Menu, X, Printer } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { openWhatsApp } from "../components/methods/ContactMethods";
 const navItems = [
   { id: "home", label: "Home", path: "/" },
   { id: "about", label: "About", path: "/about" },
   { id: "contact", label: "Contact", path: "/contact" },
   { id: "shop", label: "Printing and Branding", path: "/shop" },
-  { id: "blog", label: "Blog", path: "/blog" },
+  // { id: "blog", label: "Blog", path: "/blog" },
 ];
 
 function NavBar() {
@@ -16,9 +17,12 @@ function NavBar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
   const handleNavClick = (itemId) => {
     setIsMenuOpen(false); // Close mobile menu when item is clicked
+    scrollToTop();
   };
   const isActive = (path) => {
     return location.pathname === path;
@@ -67,7 +71,11 @@ function NavBar() {
 
             {/* Desktop Start Print Button */}
             <div className="navbar-actions common-btn desktop-only">
-              <button type="button" className="btn btn-start-print">
+              <button
+                type="button"
+                className="btn btn-start-print"
+                onClick={() => openWhatsApp()}
+              >
                 <Printer size={18} />
                 Start Print
               </button>

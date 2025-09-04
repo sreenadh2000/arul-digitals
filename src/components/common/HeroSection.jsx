@@ -1,4 +1,5 @@
 import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import "../../styles/HeroSection.scss";
 
 function HeroSection({ title, navText }) {
@@ -12,7 +13,14 @@ function HeroSection({ title, navText }) {
             <h1 className="common-title">{title}</h1>
             {/* Breadcrumb */}
             <nav className="breadcrumb">
-              <span className="breadcrumb-item">Home</span>
+              {/* <span className="breadcrumb-item">Home</span> */}
+              <Link
+                to="/"
+                className="breadcrumb-item"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Home
+              </Link>
               <ChevronRight size={16} className="breadcrumb-separator" />
               <span className="breadcrumb-item active">{navText}</span>
             </nav>

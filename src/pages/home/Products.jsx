@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { ArrowRight } from "lucide-react";
+import { openWhatsApp } from "../../components/methods/ContactMethods";
 const products = [
   {
     id: 1,
@@ -84,7 +85,11 @@ function Products() {
                   <div className="product-content">
                     <h3 className="product-name">{product.name}</h3>
                     <p className="product-description">{product.description}</p>
-                    <button type="button" className="btn btn-get-now">
+                    <button
+                      type="button"
+                      className="btn btn-get-now"
+                      onClick={() => openWhatsApp(product.name, "product")}
+                    >
                       Get It Now
                       <ArrowRight size={16} />
                     </button>

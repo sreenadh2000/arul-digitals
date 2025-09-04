@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { ArrowRight } from "lucide-react";
+import { openWhatsApp } from "../../components/methods/ContactMethods";
 
 const heroImages = [
   "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -23,7 +24,11 @@ function Hero() {
                 cards to large format printing, we deliver professional results
                 that make your brand stand out.
               </p>
-              <button type="button" className="btn btn-order-now">
+              <button
+                type="button"
+                className="btn btn-order-now"
+                onClick={() => openWhatsApp()}
+              >
                 Order Now
                 <ArrowRight size={20} />
               </button>

@@ -4,6 +4,8 @@ import App from "./App.jsx";
 import "./styles/index.scss";
 import "./styles/structure.scss";
 
+/// For Free Maps ///
+import "leaflet/dist/leaflet.css";
 // Import bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 // Import bootstrap JS (optional, only if you use modals, dropdowns, tooltips)

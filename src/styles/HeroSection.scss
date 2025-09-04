@@ -1,8 +1,4 @@
-@use "sass:color";
-
-// Contact-hero section
 .common-hero {
-  // background: linear-gradient(135deg, #567ab1 0%, #1c3f74 100%);
   background: linear-gradient(135deg, #6588be 0%, #004d83 100%);
   padding: 120px 0 80px;
   position: relative;
@@ -46,6 +42,7 @@
       font-size: 1rem;
       animation: fadeInLeft 0.8s ease-out 0.4s both;
       .breadcrumb-item {
+        text-decoration: none;
         color: rgba(255, 255, 255, 0.8);
         transition: color 0.3s ease;
 

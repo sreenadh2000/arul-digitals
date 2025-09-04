@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { ArrowRight } from "lucide-react";
 import Reviews from "./Reviews";
+import { openWhatsApp } from "../../components/methods/ContactMethods";
 const whatsNewImages = [
   {
     id: 1,
@@ -79,7 +80,11 @@ export default function WhatNewAndReviews(params) {
 
                 <div className="product-content">
                   <h3 className="product-name text-center">{item.name}</h3>
-                  <button type="button" className="btn btn-get-now">
+                  <button
+                    type="button"
+                    className="btn btn-get-now"
+                    onClick={() => openWhatsApp(item.name, "product")}
+                  >
                     Get It Now
                     <ArrowRight size={16} />
                   </button>
