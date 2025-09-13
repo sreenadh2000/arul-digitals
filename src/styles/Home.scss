@@ -131,7 +131,7 @@
           background: white;
           cursor: pointer;
           border-radius: 15px;
-          height: 24rem;
+          // height: 24rem;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
           transition: all 0.3s ease;
 
@@ -141,12 +141,10 @@
           }
 
           .product-image {
-            height: 200px;
             overflow: hidden;
-
+            text-align: center;
             img {
-              width: 100%;
-              height: 100%;
+              height: 200px;
               object-fit: cover;
               transition: transform 0.3s ease;
             }
@@ -501,12 +499,14 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     }
     .product-image {
-      height: 200px;
+      // height: 200px;
       overflow: hidden;
+      text-align: center;
 
       img {
-        width: 100%;
-        height: 100%;
+        // width: 100%;
+        // height: 100%;
+        width: 250px;
         object-fit: cover;
         transition: transform 0.3s ease;
       }

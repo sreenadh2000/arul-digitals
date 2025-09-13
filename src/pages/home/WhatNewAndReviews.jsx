@@ -7,50 +7,30 @@ const whatsNewImages = [
   {
     id: 1,
     image:
-      "https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=600",
-    name: "Business Cards",
-    description:
-      "Premium business cards with various finishes and paper options for professional networking.",
+      "arul-digitals/assets/images/products/what-new/Acrylic-trophies-new.png",
+    name: "Acrylic Trophies",
   },
   {
     id: 2,
-    image:
-      "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=600",
-    name: "Brochures",
-    description:
-      "Professional brochures in multiple sizes and folding options for marketing campaigns.",
+    image: "arul-digitals/assets/images/products/what-new/Dangler-new.png",
+    name: "Dangler",
   },
   {
     id: 3,
     image:
-      "https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=600",
-    name: "Flyers",
-    description:
-      "Eye-catching flyers for promotional events and marketing materials.",
+      "arul-digitals/assets/images/products/what-new/Customized-dairy-new.png",
+    name: "Customized Dairy",
   },
   {
     id: 4,
-    image:
-      "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=600",
-    name: "Posters",
-    description:
-      "High-quality posters in various sizes for events and advertising campaigns.",
+    image: "arul-digitals/assets/images/products/what-new/Pen-stand-new.png",
+    name: "Metal Stand Pen",
   },
   {
     id: 5,
     image:
-      "https://images.pexels.com/photos/4226219/pexels-photo-4226219.jpeg?auto=compress&cs=tinysrgb&w=600",
-    name: "Banners",
-    description:
-      "Durable banners for indoor and outdoor use with weather-resistant materials.",
-  },
-  {
-    id: 6,
-    image:
-      "https://images.pexels.com/photos/6802049/pexels-photo-6802049.jpeg?auto=compress&cs=tinysrgb&w=600",
-    name: "Stickers",
-    description:
-      "Custom stickers and labels in various shapes, sizes, and premium materials.",
+      "arul-digitals/assets/images/products/what-new/Bottle-with-mug-new.png",
+    name: "Bottle With Mug",
   },
 ];
 export default function WhatNewAndReviews(params) {
@@ -75,14 +55,14 @@ export default function WhatNewAndReviews(params) {
             <SwiperSlide key={item.id}>
               <div className="product-card">
                 <div className="product-image">
-                  <img src={item.image} alt={item.name} />
+                  <img src={item.image} alt={item.name} loading="lazy" />
                 </div>
 
                 <div className="product-content">
                   <h3 className="product-name text-center">{item.name}</h3>
                   <button
                     type="button"
-                    className="btn btn-get-now"
+                    className="btn btn-get-now mx-auto"
                     onClick={() => openWhatsApp(item.name, "product")}
                   >
                     Get It Now
@@ -95,39 +75,6 @@ export default function WhatNewAndReviews(params) {
         </Swiper>
       </section>
       <Reviews />
-      {/* <section className="review-section">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">What Customer Says</h2>
-          </div>
-          <div className="review-container-top">
-            <div className="review-container">
-              <Swiper
-                modules={[Pagination]}
-                pagination={{ clickable: true }}
-                spaceBetween={10}
-                breakpoints={{
-                  1024: { slidesPerView: 1 }, // Desktop
-                  768: { slidesPerView: 1 }, // Tablet
-                  0: { slidesPerView: 1 }, // Mobile
-                }}
-              >
-                {CustomerReviews.map((item) => (
-                  <SwiperSlide key={item.id}>
-                    <div className="review-card">
-                      <p className="review-content">{item.review}</p>
-                      <div className="review-details text-left">
-                        <h5 className="name">{item.name}</h5>
-                        <h5 className="working">{item.working}</h5>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </>
   );
 }
