@@ -25,7 +25,7 @@ function Shop() {
                   <div className="product-card mb-4">
                     <div className="product-image">
                       <img
-                        src={product.image}
+                        src={`./${product.image}`}
                         alt={product.name}
                         loading="lazy"
                       />
