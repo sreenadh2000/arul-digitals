@@ -81,9 +81,8 @@ function Products() {
                 <div className="product-card">
                   <div className="product-image">
                     <img
-                      src={`./${product.image}`}
+                      src={`${import.meta.env.BASE_URL}/${product.image}`}
                       alt={product.name}
-                      loading="lazy"
                     />
                   </div>
                   <div className="product-content">
