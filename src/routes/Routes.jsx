@@ -5,6 +5,7 @@ const Contact = lazy(() => import("../pages/contact/Contact"));
 const About = lazy(() => import("../pages/about/About"));
 const Shop = lazy(() => import("../pages/shop/Shop"));
 const Blog = lazy(() => import("../pages/blog/Blog"));
+const NotFound = lazy(() => import("../components/common/NotFound"));
 
 function Routing() {
   return (
@@ -14,6 +15,8 @@ function Routing() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/shop" element={<Shop />} />
       <Route path="/blog" element={<Blog />} />
+      {/* 👇 Catch-all route (must be last) */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
