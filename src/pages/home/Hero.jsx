@@ -4,11 +4,16 @@ import { Autoplay } from "swiper/modules";
 import { ArrowRight } from "lucide-react";
 import { openWhatsApp } from "../../components/methods/ContactMethods";
 
-const heroImages = [
-  "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=800",
-  "https://images.pexels.com/photos/4226219/pexels-photo-4226219.jpeg?auto=compress&cs=tinysrgb&w=800",
+// const heroImages = [
+//   "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800",
+//   "https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=800",
+//   "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=800",
+//   "https://images.pexels.com/photos/4226219/pexels-photo-4226219.jpeg?auto=compress&cs=tinysrgb&w=800",
+// ];
+const customImages = [
+  `${import.meta.env.BASE_URL}/assets/images/main/Sample-1.png`,
+  `${import.meta.env.BASE_URL}/assets/images/main/Sample-2.png`,
+  `${import.meta.env.BASE_URL}/assets/images/main/Sample-3.png`,
 ];
 function Hero() {
   return (
@@ -47,7 +52,7 @@ function Hero() {
                 slidesPerView={1}
                 loop={true} // repeat slides
               >
-                {heroImages.map((image, index) => (
+                {customImages.map((image, index) => (
                   <SwiperSlide key={index}>
                     <div key={index} className="image-slide">
                       <img src={image} alt={`Printing service ${index + 1}`} />

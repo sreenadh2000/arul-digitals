@@ -18,6 +18,9 @@ const whoWeAre = [
   },
 ];
 export default function Ourjounrney(params) {
+  const imgPath = `${
+    import.meta.env.BASE_URL
+  }/assets/images/main/Shop-front-side.png`;
   return (
     <>
       <section className="our-jorney">
@@ -30,7 +33,7 @@ export default function Ourjounrney(params) {
               <div className="image-container">
                 <div className="image-wrapper">
                   <img
-                    src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    src={imgPath}
                     alt="Printing process video thumbnail"
                     className="shop-image"
                   />

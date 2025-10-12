@@ -30,10 +30,10 @@ function Contact() {
                   <div className="contact-text">
                     <h2>Address</h2>
                     <p>
-                      #5, 'YASHOBHOOMI' 15th Main, 3rd Stage,
-                      <br /> 4th Block, Near BWSSB Office,
-                      <br /> Kamalanagar, Main Road Basaveshwarnagar
-                      <br /> Bengaluru - 560 079
+                      #18-486, Old Employment Building,
+                      <br /> Near Bharath Petroleum Bunk,
+                      <br /> Palamner Road, Chittoor
+                      <br /> Chittoor - 517 001
                     </p>
                   </div>
                 </div>
@@ -48,8 +48,9 @@ function Contact() {
                   </div>
                   <div className="contact-text">
                     <h2>Phone Number</h2>
-                    <p>+1 (555) 123-4567</p>
-                    <p>+1 (555) 987-6543</p>
+                    <p>+91 6303895737</p>
+                    <p>+91 9014364411</p>
+                    <p>+91 7285946873</p>
                   </div>
                 </div>
               </div>
@@ -66,7 +67,7 @@ function Contact() {
                   </div>
                   <div className="contact-text">
                     <h2>E-Mail</h2>
-                    <p>design@aruldigitals.com</p>
+                    <p>aruldigitalschittoor@gmail.com</p>
                   </div>
                 </div>
               </div>

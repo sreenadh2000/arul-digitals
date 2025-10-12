@@ -5,23 +5,23 @@ const CustomerReviews = [
   {
     id: 1,
     review:
-      "They are fast and very good service we got from them.  Cost effective and Manjunath and Charan are very good.  They will deliver within 3 hours to our door step",
-    name: "Satya Nadella",
-    working: "Microsoft",
+      "Excellent service with quick turnaround time. The team, especially Manjunath and Charan, ensured our prints were delivered perfectly within a few hours. Very professional, cost-effective, and reliable service overall.",
+    name: "Jayadev Galla",
+    working: "Amara Raja Energy & Mobility",
   },
   {
     id: 2,
     review:
-      "Quality service, timely delivery & Mr Manjunath is very soft spoken & attends to the work perfectly. Mr Chand understands what the customer needs & does the work accordingly. Overall wonderful experience",
-    name: "Anand Mahendra",
-    working: "Tech Mahindra",
+      "Very professional and responsive service. Manjunath handled the work with care, and Chand clearly understood our requirements. Delivery was on time and the quality exceeded expectations. Highly satisfied with the experience.",
+    name: "Harsha Vardhan Puranam",
+    working: "Electrical Engineer",
   },
   {
     id: 3,
     review:
-      "Customer friendly! Pocket friendly! Go to place for any sort of printing",
-    name: "Elon Musk",
-    working: "Tesla",
+      "Great experience with their service. The team is customer-friendly, affordable, and delivers quality prints on time. Perfect choice for anyone looking for fast, reliable, and professional printing solutions.",
+    name: "Bahnu",
+    working: "Software Engineer",
   },
 ];
 export default function Reviews() {

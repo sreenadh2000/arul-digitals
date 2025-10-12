@@ -1,13 +1,44 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { ArrowRight, Check, Play } from "lucide-react";
 import { openWhatsApp } from "../../components/methods/ContactMethods";
 const images = [
-  { id: 1, src: "https://picsum.photos/600/400?random=1", text: "Image One" },
-  { id: 2, src: "https://picsum.photos/600/400?random=2", text: "Image Two" },
-  { id: 3, src: "https://picsum.photos/600/400?random=3", text: "Image Three" },
-  { id: 4, src: "https://picsum.photos/600/400?random=4", text: "Image Four" },
-  { id: 5, src: "https://picsum.photos/600/400?random=4", text: "Image Five" },
+  {
+    id: 1,
+    src: `${import.meta.env.BASE_URL}/assets/images/brands/AmaraRaja.png`,
+    text: "Amara Raja",
+  },
+  {
+    id: 2,
+    src: `${import.meta.env.BASE_URL}/assets/images/brands/allen.png`,
+    text: "Allen solly",
+  },
+  {
+    id: 3,
+    src: `${import.meta.env.BASE_URL}/assets/images/brands/biba.png`,
+    text: "Biba",
+  },
+  {
+    id: 4,
+    src: `${import.meta.env.BASE_URL}/assets/images/brands/coramandal.png`,
+    text: "Coramandal",
+  },
+  {
+    id: 5,
+    src: `${import.meta.env.BASE_URL}/assets/images/brands/murugappa.png`,
+    text: "murugappa",
+  },
+  {
+    id: 6,
+    src: `${import.meta.env.BASE_URL}/assets/images/brands/Parijath.png`,
+    text: "Parijath",
+  },
+  {
+    id: 7,
+    src: `${import.meta.env.BASE_URL}/assets/images/brands/Triune.png`,
+    text: "triune",
+  },
 ];
 const videoFeatures = [
   "Professional printing equipment and technology",
@@ -28,12 +59,19 @@ export default function BrandAndVideo(params) {
           </div>
           <div className="brand-swiper">
             <Swiper
-              modules={[Pagination]}
+              modules={[Pagination, Autoplay]}
               pagination={{ clickable: true }}
-              spaceBetween={2}
+              autoplay={{
+                delay: 0, // time between slides (ms)
+                disableOnInteraction: false, // keep autoplay even after user interaction
+              }}
+              speed={3000}
+              freeMode={true}
+              loop={true}
+              spaceBetween={80}
               breakpoints={{
-                1024: { slidesPerView: 3 }, // Desktop
-                768: { slidesPerView: 2 }, // Tablet
+                1024: { slidesPerView: 4 }, // Desktop
+                768: { slidesPerView: 3 }, // Tablet
                 0: { slidesPerView: 1 }, // Mobile
               }}
             >

@@ -80,7 +80,7 @@ export default function ContactForm(params) {
       subject: "",
       message: "",
     });
-
+    
     // Reset success message after 5 seconds
     setTimeout(() => setIsSubmitted(false), 5000);
   };

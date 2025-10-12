@@ -1,5 +1,5 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-const position = [12.9716, 77.5946];
+const position = [13.21414796338859, 79.09668426806766];
 const locationName = "Arul Digitals";
 export default function MapView() {
   return (

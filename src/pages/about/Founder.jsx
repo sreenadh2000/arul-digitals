@@ -1,4 +1,7 @@
 export default function Founder(params) {
+  const imgPath = `${
+    import.meta.env.BASE_URL
+  }/assets/images/main/owner-photo.png`;
   return (
     <>
       <section className="founder-section">
@@ -10,7 +13,7 @@ export default function Founder(params) {
             {/* Left Side - Image */}
             <div className="col-md-5 text-center">
               <img
-                src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src={imgPath}
                 alt="Founder"
                 className="img-fluid rounded-circle shadow-lg founder-img"
               />

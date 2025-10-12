@@ -6,8 +6,8 @@ import {
   Globe,
   Phone,
   Facebook,
-  Twitter,
   Instagram,
+  Linkedin,
 } from "lucide-react";
 import {
   makeCall,
@@ -31,7 +31,7 @@ function Footer() {
                   <div className="footer-logo">
                     <Printer size={36} />
                   </div>
-                  <span className="footer-brand-name">PrintPro</span>
+                  <span className="footer-brand-name">Arul Digitals</span>
                 </div>
 
                 <p className="footer-description">
@@ -43,21 +43,21 @@ function Footer() {
 
                 <div className="social-media">
                   <a
-                    href="https://www.facebook.com/sreenadh.bathalakuri/"
+                    //  href="https://www.facebook.com/sreenadh.bathalakuri/"
                     className="social-link"
                     aria-label="Facebook"
                   >
                     <Facebook size={20} />
                   </a>
                   <a
-                    href="https://x.com/SBathalaku89795"
+                    //  href="https://x.com/SBathalaku89795"
                     className="social-link"
-                    aria-label="Twitter"
+                    aria-label="LinkedIn"
                   >
-                    <Twitter size={20} />
+                    <Linkedin size={20} />
                   </a>
                   <a
-                    href="https://www.instagram.com/harshapuranam/"
+                    //  href="https://www.instagram.com/harshapuranam/"
                     className="social-link"
                     aria-label="Instagram"
                   >
@@ -79,7 +79,7 @@ function Footer() {
                     </div>
                     <div className="office-text">
                       <span className="office-label">Business Hours</span>
-                      <span className="office-value">Mon-Fri: 8AM-6PM</span>
+                      <span className="office-value">Mon-Sat: 8AM-6PM</span>
                     </div>
                   </div>
 
@@ -90,7 +90,9 @@ function Footer() {
                     <div className="office-text">
                       <span className="office-label">Address</span>
                       <span className="office-value">
-                        123 Print Street, Design City, DC 12345
+                        #18-486, Old Employment Building,
+                        <br /> Near Bharath Petroleum Bunk,
+                        <br /> Palamner Road, Chittor, 517001
                       </span>
                     </div>
                   </div>
@@ -101,7 +103,7 @@ function Footer() {
                     </div>
                     <div className="office-text">
                       <span className="office-label">Website</span>
-                      <span className="office-value">www.printpro.com</span>
+                      <span className="office-value">www.aruldigitals.com</span>
                     </div>
                   </div>
 
@@ -111,8 +113,9 @@ function Footer() {
                     </div>
                     <div className="office-text">
                       <span className="office-label">Phone</span>
-                      <span className="office-value">+1 (555) 123-4567</span>
-                      <span className="office-value">+1 (555) 123-4567</span>
+                      <span className="office-value">+91 6303895737</span>
+                      <span className="office-value">+91 9014364411</span>
+                      <span className="office-value">+91 7285946873</span>
                     </div>
                   </div>
                 </div>
@@ -172,8 +175,8 @@ function Footer() {
         <div className="container">
           <div className="copyright-content">
             <p className="copyright-text">
-              © 2025 PrintPro. All rights reserved. | Designed with excellence
-              for printing solutions.
+              © 2025 ArulDigitals. All rights reserved. | Designed with
+              excellence for printing solutions.
             </p>
           </div>
         </div>

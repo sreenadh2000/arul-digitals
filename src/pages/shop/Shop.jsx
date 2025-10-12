@@ -25,7 +25,7 @@ function Shop() {
                   <div className="product-card mb-4">
                     <div className="product-image">
                       <img
-                        src={`${product.image}`}
+                        src={`${import.meta.env.BASE_URL}/${product.image}`}
                         alt={product.name}
                         loading="lazy"
                       />
