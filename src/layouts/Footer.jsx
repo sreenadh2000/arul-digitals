@@ -14,7 +14,7 @@ import {
   openGoogleMaps,
   openWebSite,
 } from "../components/methods/ContactMethods";
-
+const imgPath = `${import.meta.env.BASE_URL}/assets/images/main/logo-name.png`;
 function Footer() {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
@@ -28,10 +28,11 @@ function Footer() {
             <div className="col-lg-4 col-md-6 col-12 mb-4">
               <div className="footer-section">
                 <div className="footer-brand">
-                  <div className="footer-logo">
+                  {/* <div className="footer-logo">
                     <Printer size={36} />
                   </div>
-                  <span className="footer-brand-name">Arul Digitals</span>
+                  <span className="footer-brand-name">Arul Digitals</span> */}
+                  <img src={imgPath} alt="logo-image" className="" />
                 </div>
 
                 <p className="footer-description">

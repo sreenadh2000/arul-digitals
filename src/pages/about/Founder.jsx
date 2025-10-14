@@ -1,7 +1,7 @@
 export default function Founder(params) {
   const imgPath = `${
     import.meta.env.BASE_URL
-  }/assets/images/main/owner-photo.png`;
+  }/assets/images/main/Owner-main.png`;
   return (
     <>
       <section className="founder-section">
@@ -22,7 +22,7 @@ export default function Founder(params) {
             <div className="col-md-7 text-white details">
               <h4>Mr. Arul Kumar</h4>
               <p>
-                With over <strong>15 years of experience</strong> in the
+                With over <strong>7+ years of experience</strong> in the
                 printing industry, Mr. Arul has built Arul Digital Printers into
                 a trusted name for businesses and individuals. His expertise in
                 digital and offset printing ensures every project meets the

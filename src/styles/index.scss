@@ -137,17 +137,14 @@ $transition-duration: 0.3s;
 
   .navbar-brand {
     gap: 0.75rem;
-
+    text-align: center;
     .logo {
       color: $active-color;
-    }
-
-    .brand-name {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: $text-color;
-      text-decoration: none;
-      letter-spacing: 0.5px;
+      img {
+        height: 6rem;
+        width: 100%;
+        object-fit: contain;
+      }
     }
   }
 
@@ -558,28 +555,10 @@ $transition-duration: 0.3s;
         align-items: center;
         gap: 1rem;
         margin-bottom: 1.5rem;
-
-        .footer-logo {
-          color: #009688;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: rgba(0, 150, 136, 0.1);
-          width: 50px;
-          height: 50px;
-          border-radius: 10px;
-          transition: all 0.3s ease;
-          &:hover {
-            background: rgba(0, 150, 136, 0.2);
-            transform: scale(1.05);
-          }
-        }
-
-        .footer-brand-name {
-          font-size: 1.75rem;
-          font-weight: 700;
-          color: #ffffff;
-          letter-spacing: 0.5px;
+        img {
+          height: 6rem;
+          width: 100%;
+          object-fit: contain;
         }
       }
 
@@ -905,9 +884,11 @@ $transition-duration: 0.3s;
       }
 
       .logo {
-        svg {
-          width: 28px;
-          height: 28px;
+        color: $active-color;
+        img {
+          height: 4rem;
+          width: auto;
+          object-fit: contain;
         }
       }
     }

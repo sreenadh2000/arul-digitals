@@ -9,7 +9,7 @@ const navItems = [
   { id: "shop", label: "Printing and Branding", path: "/shop" },
   // { id: "blog", label: "Blog", path: "/blog" },
 ];
-
+const imgPath = `${import.meta.env.BASE_URL}/assets/images/main/logo-name.png`;
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -35,9 +35,10 @@ function NavBar() {
             {/* Logo and Brand */}
             <div className="navbar-brand d-flex align-items-center">
               <div className="logo d-flex align-items-center justify-content-center">
-                <Printer size={32} />
+                {/* <Printer size={32} /> */}
+                <img src={imgPath} alt="logo-image" className="" />
               </div>
-              <span className="brand-name">Arul Digitals</span>
+              {/* <span className="brand-name">Arul Digitals</span> */}
             </div>
 
             {/* Desktop Navigation Links */}
