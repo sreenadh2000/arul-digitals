@@ -1,7 +1,13 @@
-import { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useState, useRef } from "react";
+import { Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
+
+const service_Id = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const template_Id = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const public_key = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function ContactForm(params) {
+  const form = useRef();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -66,8 +72,29 @@ export default function ContactForm(params) {
     }
 
     setIsSubmitting(true);
-
+    console.log(form.current);
     // Simulate API call
+    // emailjs
+    //   .sendForm(service_Id, template_Id, form.current, {
+    //     publicKey: public_key,
+    //   })
+    //   .then(
+    //     () => {
+    //       console.log("SUCCESS!");
+    //       setIsSubmitting(false);
+    //       setIsSubmitted(true);
+    //       setFormData({
+    //         firstName: "",
+    //         lastName: "",
+    //         email: "",
+    //         phone: "",
+    //         message: "",
+    //       });
+    //     },
+    //     (error) => {
+    //       console.log("FAILED...", error.text);
+    //     }
+    //   );
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
     setIsSubmitting(false);
@@ -77,10 +104,9 @@ export default function ContactForm(params) {
       lastName: "",
       email: "",
       phone: "",
-      subject: "",
       message: "",
     });
-    
+
     // Reset success message after 5 seconds
     setTimeout(() => setIsSubmitted(false), 5000);
   };
@@ -109,7 +135,7 @@ export default function ContactForm(params) {
                         successfully. We'll get back to you soon.
                       </div>
                     )}
-                    <form onSubmit={handleSubmit} noValidate>
+                    <form ref={form} onSubmit={handleSubmit} noValidate>
                       <div className="row">
                         <div className="col-md-6">
                           <div className="form-group">
