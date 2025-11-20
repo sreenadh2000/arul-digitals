@@ -10,10 +10,15 @@ import { openWhatsApp } from "../../components/methods/ContactMethods";
 //   "https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=800",
 //   "https://images.pexels.com/photos/4226219/pexels-photo-4226219.jpeg?auto=compress&cs=tinysrgb&w=800",
 // ];
+// const customImages = [
+//   `${import.meta.env.BASE_URL}/assets/images/main/Sample-1.png`,
+//   `${import.meta.env.BASE_URL}/assets/images/main/Sample-2.png`,
+//   `${import.meta.env.BASE_URL}/assets/images/main/Sample-3.png`,
+// ];
 const customImages = [
-  `${import.meta.env.BASE_URL}/assets/images/main/Sample-1.png`,
-  `${import.meta.env.BASE_URL}/assets/images/main/Sample-2.png`,
-  `${import.meta.env.BASE_URL}/assets/images/main/Sample-3.png`,
+  `/assets/images/main/Sample-1.png`,
+  `/assets/images/main/Sample-2.png`,
+  `/assets/images/main/Sample-3.png`,
 ];
 function Hero() {
   return (

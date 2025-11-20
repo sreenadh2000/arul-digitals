@@ -6,37 +6,44 @@ import { openWhatsApp } from "../../components/methods/ContactMethods";
 const images = [
   {
     id: 1,
-    src: `${import.meta.env.BASE_URL}/assets/images/brands/AmaraRaja.png`,
+    // src: `${import.meta.env.BASE_URL}/assets/images/brands/AmaraRaja.png`,
+    src: `/assets/images/brands/AmaraRaja.png`,
     text: "Amara Raja",
   },
   {
     id: 2,
-    src: `${import.meta.env.BASE_URL}/assets/images/brands/allen.png`,
+    // src: `${import.meta.env.BASE_URL}/assets/images/brands/allen.png`,
+    src: `/assets/images/brands/allen.png`,
     text: "Allen solly",
   },
   {
     id: 3,
-    src: `${import.meta.env.BASE_URL}/assets/images/brands/biba.png`,
+    // src: `${import.meta.env.BASE_URL}/assets/images/brands/biba.png`,
+    src: `/assets/images/brands/biba.png`,
     text: "Biba",
   },
   {
     id: 4,
-    src: `${import.meta.env.BASE_URL}/assets/images/brands/coramandal.png`,
+    // src: `${import.meta.env.BASE_URL}/assets/images/brands/coramandal.png`,
+    src: `/assets/images/brands/coramandal.png`,
     text: "Coramandal",
   },
   {
     id: 5,
-    src: `${import.meta.env.BASE_URL}/assets/images/brands/murugappa.png`,
+    // src: `${import.meta.env.BASE_URL}/assets/images/brands/murugappa.png`,
+    src: `/assets/images/brands/murugappa.png`,
     text: "murugappa",
   },
   {
     id: 6,
-    src: `${import.meta.env.BASE_URL}/assets/images/brands/Parijath.png`,
+    // src: `${import.meta.env.BASE_URL}/assets/images/brands/Parijath.png`,
+    src: `/assets/images/brands/Parijath.png`,
     text: "Parijath",
   },
   {
     id: 7,
-    src: `${import.meta.env.BASE_URL}/assets/images/brands/Triune.png`,
+    // src: `${import.meta.env.BASE_URL}/assets/images/brands/Triune.png`,
+    src: `/assets/images/brands/Triune.png`,
     text: "triune",
   },
 ];

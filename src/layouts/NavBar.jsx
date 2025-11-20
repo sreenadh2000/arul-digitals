@@ -9,7 +9,8 @@ const navItems = [
   { id: "shop", label: "Printing and Branding", path: "/shop" },
   // { id: "blog", label: "Blog", path: "/blog" },
 ];
-const imgPath = `${import.meta.env.BASE_URL}/assets/images/main/logo-name.png`;
+// const imgPath = `${import.meta.env.BASE_URL}/assets/images/main/logo-name.png`;
+const imgPath = `/assets/images/main/logo-name.png`;
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();

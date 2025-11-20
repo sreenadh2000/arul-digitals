@@ -18,9 +18,10 @@ const whoWeAre = [
   },
 ];
 export default function Ourjounrney(params) {
-  const imgPath = `${
-    import.meta.env.BASE_URL
-  }/assets/images/main/Shop-front-side.png`;
+  // const imgPath = `${
+  //   import.meta.env.BASE_URL
+  // }/assets/images/main/Shop-front-side.png`;
+  const imgPath = `/assets/images/main/Shop-front-side.png`;
   return (
     <>
       <section className="our-jorney">

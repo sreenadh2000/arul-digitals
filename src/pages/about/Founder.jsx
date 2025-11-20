@@ -1,7 +1,8 @@
 export default function Founder(params) {
-  const imgPath = `${
-    import.meta.env.BASE_URL
-  }/assets/images/main/Owner-main.png`;
+  // const imgPath = `${
+  //   import.meta.env.BASE_URL
+  // }/assets/images/main/Owner-main.png`;
+  const imgPath = `/assets/images/main/Owner-main.png`;
   return (
     <>
       <section className="founder-section">

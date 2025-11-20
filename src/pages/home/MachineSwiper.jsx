@@ -16,25 +16,29 @@ import "swiper/css/pagination";
 const machines = [
   {
     id: 1,
-    src: `${import.meta.env.BASE_URL}/assets/images/machines/Machine-1.png`,
+    // src: `${import.meta.env.BASE_URL}/assets/images/machines/Machine-1.png`,
+    src: `/assets/images/machines/Machine-1.png`,
     heading: "Flex Machine",
     text: "It prints images on flexible materials like vinyl and banners, mainly used for signage and advertising.",
   },
   {
     id: 2,
-    src: `${import.meta.env.BASE_URL}/assets/images/machines/Machine-2.png`,
+    // src: `${import.meta.env.BASE_URL}/assets/images/machines/Machine-2.png`,
+    src: `/assets/images/machines/Machine-2.png`,
     heading: "Solvent Printer",
     text: "It prints large-format media, such as flex banners, for items like billboards, exhibition graphics.",
   },
   {
     id: 3,
-    src: `${import.meta.env.BASE_URL}/assets/images/machines/Machine-3.png`,
+    // src: `${import.meta.env.BASE_URL}/assets/images/machines/Machine-3.png`,
+    src: `/assets/images/machines/Machine-3.png`,
     heading: "Heat Press Machine",
     text: "It is used to apply designs to various items, such as t-shirts, hats, and mugs.",
   },
   {
     id: 4,
-    src: `${import.meta.env.BASE_URL}/assets/images/machines/Machine-4.png`,
+    // src: `${import.meta.env.BASE_URL}/assets/images/machines/Machine-4.png`,
+    src: `/assets/images/machines/Machine-4.png`,
     heading: "Cap Heat Press Machine",
     text: "It is a specialized device used in printing shops to apply designs, logos, or other graphics onto caps and hats.",
   },

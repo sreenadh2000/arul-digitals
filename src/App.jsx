@@ -4,7 +4,7 @@ import Routing from "./routes/Routes";
 import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
-    <BrowserRouter basename="arul-digitals">
+    <BrowserRouter>
       <div>
         <NavBar />
         <Routing />

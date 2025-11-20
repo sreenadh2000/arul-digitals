@@ -52,7 +52,8 @@ export default function WhatNewAndReviews(params) {
             <SwiperSlide key={item.id}>
               <div className="product-card">
                 <div className="product-image">
-                  <img src={`${import.meta.env.BASE_URL}/${item.image}`} alt={item.name} />
+                  {/* <img src={`${import.meta.env.BASE_URL}/${item.image}`} alt={item.name} /> */}
+                     <img src={`/${item.image}`} alt={item.name} />
                 </div>
 
                 <div className="product-content">

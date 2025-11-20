@@ -14,7 +14,8 @@ import {
   openGoogleMaps,
   openWebSite,
 } from "../components/methods/ContactMethods";
-const imgPath = `${import.meta.env.BASE_URL}/assets/images/main/logo-name.png`;
+// const imgPath = `${import.meta.env.BASE_URL}/assets/images/main/logo-name.png`;
+const imgPath = `/assets/images/main/logo-name.png`;
 function Footer() {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
