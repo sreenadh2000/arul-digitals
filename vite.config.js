@@ -18,9 +18,9 @@ export default defineConfig(({ mode }) => {
           : path.resolve(__dirname, "src/styles"),
 
         // 👇 Image alias for DEV vs PROD
-        "@images": isProd
-          ? path.resolve(__dirname, "src/assets/prod")
-          : path.resolve(__dirname, "src/assets/dev"),
+        // "@images": isProd
+        //   ? path.resolve(__dirname, "src/assets/prod")
+        //   : path.resolve(__dirname, "src/assets/dev"),
       },
     },
   };
