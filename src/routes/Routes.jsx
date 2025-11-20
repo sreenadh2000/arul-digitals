@@ -16,7 +16,7 @@ function Routing() {
       <Route path="/shop" element={<Shop />} />
       <Route path="/blog" element={<Blog />} />
       {/* 👇 Catch-all route (must be last) */}
-      <Route path="*" element={<NotFound />} />
+      {/* <Route path="*" element={<NotFound />} /> */}
     </Routes>
   );
 }
