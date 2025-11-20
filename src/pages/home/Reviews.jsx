@@ -51,8 +51,8 @@ export default function Reviews() {
                     <div className="review-card">
                       <p className="review-content">{item.review}</p>
                       <div className="review-details text-left">
-                        <h5 className="name">{item.name}</h5>
-                        <h5 className="working">{item.working}</h5>
+                        <p className="name">{item.name}</p>
+                        <p className="working">{item.working}</p>
                       </div>
                     </div>
                   </SwiperSlide>

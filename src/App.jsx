@@ -7,7 +7,9 @@ function App() {
     <BrowserRouter>
       <div>
         <NavBar />
-        <Routing />
+        <main>
+          <Routing />
+        </main>
         <Footer />
       </div>
     </BrowserRouter>

@@ -49,21 +49,21 @@ function Footer() {
                     className="social-link"
                     aria-label="Facebook"
                   >
-                    <Facebook size={20} />
+                    <Facebook size={20} aria-hidden="true" />
                   </a>
                   <a
                     //  href="https://x.com/SBathalaku89795"
                     className="social-link"
                     aria-label="LinkedIn"
                   >
-                    <Linkedin size={20} />
+                    <Linkedin size={20} aria-hidden="true" />
                   </a>
                   <a
                     //  href="https://www.instagram.com/harshapuranam/"
                     className="social-link"
                     aria-label="Instagram"
                   >
-                    <Instagram size={20} />
+                    <Instagram size={20} aria-hidden="true" />
                   </a>
                 </div>
               </div>
