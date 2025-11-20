@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import "../../styles/review.scss";
+// import "../../styles/review.scss";
+import "@styles/review.scss";
+
 const CustomerReviews = [
   {
     id: 1,

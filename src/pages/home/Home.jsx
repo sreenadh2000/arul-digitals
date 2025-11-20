@@ -4,7 +4,8 @@ import Impacts from "./Impacts";
 import MachineSwiper from "./MachineSwiper";
 import BrandAndVideo from "./BrandAndVideo";
 import WhatNewAndReviews from "./WhatNewAndReviews";
-import "../../styles/home.scss";
+// import "../../styles/home.scss";
+import "@styles/home.scss";
 
 function Home(params) {
   return (

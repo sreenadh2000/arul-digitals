@@ -6,13 +6,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// const images = [
-//   { id: 1, src: "https://picsum.photos/600/400?random=1", text: "Image One" },
-//   { id: 2, src: "https://picsum.photos/600/400?random=2", text: "Image Two" },
-//   { id: 3, src: "https://picsum.photos/600/400?random=3", text: "Image Three" },
-//   { id: 4, src: "https://picsum.photos/600/400?random=4", text: "Image Four" },
-//   { id: 5, src: "https://picsum.photos/600/400?random=4", text: "Image Five" },
-// ];
 const machines = [
   {
     id: 1,

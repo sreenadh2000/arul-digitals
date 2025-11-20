@@ -1,8 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
-import "./styles/index.scss";
-import "./styles/structure.scss";
+// import "./styles/index.scss";
+import "@styles/index.scss";
+// import "./styles/structure.scss";
+import "@styles/structure.scss";
 
 /// For Free Maps ///
 import "leaflet/dist/leaflet.css";

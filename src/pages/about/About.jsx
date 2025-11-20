@@ -1,6 +1,7 @@
 import HeroSection from "../../components/common/HeroSection";
 import Ourjounrney from "./Ourjounrney";
-import "../../styles/about.scss";
+// import "../../styles/about.scss";
+import "@styles/about.scss";
 import OurServices from "./OurServices";
 import Founder from "./Founder";
 import Reviews from "../home/Reviews";
