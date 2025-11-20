@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { lazy } from "react";
 const Home = lazy(() => import("../pages/home/Home"));
 const Contact = lazy(() => import("../pages/contact/Contact"));
@@ -17,6 +17,8 @@ function Routing() {
       <Route path="/blog" element={<Blog />} />
       {/* 👇 Catch-all route (must be last) */}
       {/* <Route path="*" element={<NotFound />} /> */}
+      {/* Redirect unknown routes */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }
