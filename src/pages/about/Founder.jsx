@@ -1,8 +1,5 @@
 export default function Founder(params) {
-  // const imgPath = `${
-  //   import.meta.env.BASE_URL
-  // }/assets/images/main/Owner-main.png`;
-  const imgPath = `/assets/images/main/Owner-main.png`;
+  const imgPath = `/assets/images/main/arul-digitals-shop-owner.webp`;
   return (
     <>
       <section className="founder-section">
@@ -23,11 +20,16 @@ export default function Founder(params) {
             <div className="col-md-7 text-white details">
               <h4>Mr. Arul Kumar</h4>
               <p>
+                {" "}
                 With over <strong>7+ years of experience</strong> in the
                 printing industry, Mr. Arul has built Arul Digital Printers into
-                a trusted name for businesses and individuals. His expertise in
-                digital and offset printing ensures every project meets the
-                highest quality standards.
+                a trusted and reputable brand for both businesses and
+                individuals. Starting his journey on the{" "}
+                <strong>Chittoor–Palamaner Road</strong>, he grew the shop from
+                a small printing setup into a full-fledged digital and offset
+                printing hub. His deep expertise, commitment to quality, and
+                customer-first approach ensure that every project meets the{" "}
+                <strong>highest professional standards</strong>.{" "}
               </p>
             </div>
           </div>

@@ -4,15 +4,10 @@ import { Autoplay } from "swiper/modules";
 import { ArrowRight } from "lucide-react";
 import { openWhatsApp } from "../../components/methods/ContactMethods";
 
-// const customImages = [
-//   `${import.meta.env.BASE_URL}/assets/images/main/Sample-1.png`,
-//   `${import.meta.env.BASE_URL}/assets/images/main/Sample-2.png`,
-//   `${import.meta.env.BASE_URL}/assets/images/main/Sample-3.png`,
-// ];
 const customImages = [
-  `/assets/images/main/Sample-1.png`,
-  `/assets/images/main/Sample-2.png`,
-  `/assets/images/main/Sample-3.png`,
+  `/assets/images/main/doctor-name-board.webp`,
+  `/assets/images/main/light-name-board.webp`,
+  `/assets/images/main/hospital-sample.webp`,
 ];
 function Hero() {
   return (
@@ -50,6 +45,12 @@ function Hero() {
                 }}
                 slidesPerView={1}
                 loop={true} // repeat slides
+                // 🚀 CRITICAL PERFORMANCE FIXES
+                observer={false}
+                observeParents={false}
+                observeSlideChildren={false}
+                watchSlidesProgress={false}
+                watchOverflow={true}
               >
                 {customImages.map((image, index) => (
                   <SwiperSlide key={index}>

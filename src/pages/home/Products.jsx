@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react";
 import { openWhatsApp } from "../../components/methods/ContactMethods";
 import products from "../../utils/our-products.json";
 
-
 function Products() {
   return (
     <section className="products-section">
@@ -27,13 +26,18 @@ function Products() {
               768: { slidesPerView: 2 }, // Tablet
               0: { slidesPerView: 1 }, // Mobile
             }}
+            // 🚀 CRITICAL PERFORMANCE FIXES
+            observer={false}
+            observeParents={false}
+            observeSlideChildren={false}
+            watchSlidesProgress={false}
+            watchOverflow={true}
           >
             {products.map((product) => (
               <SwiperSlide key={product.id}>
                 <div className="product-card">
                   <div className="product-image">
                     <img src={`/${product.image}`} alt={product.name} />
-                    {/* <img src={`${import.meta.env.BASE_URL}/${product.image}`} alt={product.name} /> */}
                   </div>
                   <div className="product-content">
                     <h3 className="product-name">{product.name}</h3>

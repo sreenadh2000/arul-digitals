@@ -6,27 +6,27 @@ import { openWhatsApp } from "../../components/methods/ContactMethods";
 const whatsNewImages = [
   {
     id: 1,
-    image: "assets/images/products/what-new/Acrylic-trophies-new.png",
+    image: "assets/images/products/what-new/acrylic-trophies-new.webp",
     name: "Acrylic Trophies",
   },
   {
     id: 2,
-    image: "assets/images/products/what-new/Dangler-new.png",
+    image: "assets/images/products/what-new/dangler-new.webp",
     name: "Dangler",
   },
   {
     id: 3,
-    image: "assets/images/products/what-new/Customized-dairy-new.png",
+    image: "assets/images/products/what-new/customized-dairy-new.webp",
     name: "Customized Dairy",
   },
   {
     id: 4,
-    image: "assets/images/products/what-new/Pen-stand-new.png",
+    image: "assets/images/products/what-new/pen-stand-new.webp",
     name: "Metal Stand Pen",
   },
   {
     id: 5,
-    image: "assets/images/products/what-new/Bottle-with-mug-new.png",
+    image: "assets/images/products/what-new/bottle-with-mug-new.webp",
     name: "Bottle With Mug",
   },
 ];
@@ -47,13 +47,18 @@ export default function WhatNewAndReviews(params) {
             768: { slidesPerView: 2 }, // Tablet
             0: { slidesPerView: 1 }, // Mobile
           }}
+          // 🚀 CRITICAL PERFORMANCE FIXES
+          observer={false}
+          observeParents={false}
+          observeSlideChildren={false}
+          watchSlidesProgress={false}
+          watchOverflow={true}
         >
           {whatsNewImages.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="product-card">
                 <div className="product-image">
-                  {/* <img src={`${import.meta.env.BASE_URL}/${item.image}`} alt={item.name} /> */}
-                     <img src={`/${item.image}`} alt={item.name} />
+                  <img src={`/${item.image}`} alt={item.name} />
                 </div>
 
                 <div className="product-content">

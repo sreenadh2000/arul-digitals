@@ -6,44 +6,40 @@ import { openWhatsApp } from "../../components/methods/ContactMethods";
 const images = [
   {
     id: 1,
-    // src: `${import.meta.env.BASE_URL}/assets/images/brands/AmaraRaja.png`,
-    src: `/assets/images/brands/AmaraRaja.png`,
+    src: `/assets/images/brands/amaraRaja.webp`,
     text: "Amara Raja",
   },
   {
     id: 2,
-    // src: `${import.meta.env.BASE_URL}/assets/images/brands/allen.png`,
-    src: `/assets/images/brands/allen.png`,
+    src: `/assets/images/brands/allen.webp`,
     text: "Allen solly",
   },
   {
     id: 3,
-    // src: `${import.meta.env.BASE_URL}/assets/images/brands/biba.png`,
-    src: `/assets/images/brands/biba.png`,
+    src: `/assets/images/brands/biba.webp`,
     text: "Biba",
   },
   {
     id: 4,
-    // src: `${import.meta.env.BASE_URL}/assets/images/brands/coramandal.png`,
-    src: `/assets/images/brands/coramandal.png`,
+    src: `/assets/images/brands/coramandal.webp`,
     text: "Coramandal",
   },
   {
     id: 5,
-    // src: `${import.meta.env.BASE_URL}/assets/images/brands/murugappa.png`,
-    src: `/assets/images/brands/murugappa.png`,
+
+    src: `/assets/images/brands/murugappa.webp`,
     text: "murugappa",
   },
   {
     id: 6,
-    // src: `${import.meta.env.BASE_URL}/assets/images/brands/Parijath.png`,
-    src: `/assets/images/brands/Parijath.png`,
+
+    src: `/assets/images/brands/parijath.webp`,
     text: "Parijath",
   },
   {
     id: 7,
-    // src: `${import.meta.env.BASE_URL}/assets/images/brands/Triune.png`,
-    src: `/assets/images/brands/Triune.png`,
+
+    src: `/assets/images/brands/triune.webp`,
     text: "triune",
   },
 ];
@@ -54,6 +50,7 @@ const videoFeatures = [
   "Quality guarantee on all printing services",
   "Eco-friendly printing options available",
 ];
+const imgPath = `/assets/images/main/Arul-digitals-front-side.webp`;
 export default function BrandAndVideo(params) {
   return (
     <>
@@ -81,6 +78,12 @@ export default function BrandAndVideo(params) {
                 768: { slidesPerView: 3 }, // Tablet
                 0: { slidesPerView: 1 }, // Mobile
               }}
+              // 🚀 CRITICAL PERFORMANCE FIXES
+              observer={false}
+              observeParents={false}
+              observeSlideChildren={false}
+              watchSlidesProgress={false}
+              watchOverflow={true}
             >
               {images.map((item) => (
                 <SwiperSlide key={item.id}>
@@ -101,15 +104,10 @@ export default function BrandAndVideo(params) {
               <div className="video-container">
                 <div className="video-wrapper">
                   <img
-                    src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800"
-                    alt="Printing process video thumbnail"
+                    src={imgPath}
+                    alt="arul digitals shop front side photo"
                     className="video-thumbnail"
                   />
-                  <div className="video-overlay">
-                    <button type="button" className="play-button">
-                      <Play size={32} />
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>

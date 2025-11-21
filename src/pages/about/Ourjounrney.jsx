@@ -18,10 +18,7 @@ const whoWeAre = [
   },
 ];
 export default function Ourjounrney(params) {
-  // const imgPath = `${
-  //   import.meta.env.BASE_URL
-  // }/assets/images/main/Shop-front-side.png`;
-  const imgPath = `/assets/images/main/Shop-front-side.png`;
+  const imgPath = `/assets/images/main/Arul-digitals-front-side.webp`;
   return (
     <>
       <section className="our-jorney">
@@ -35,7 +32,7 @@ export default function Ourjounrney(params) {
                 <div className="image-wrapper">
                   <img
                     src={imgPath}
-                    alt="Printing process video thumbnail"
+                    alt="arul digitals shop front side photo"
                     className="shop-image"
                   />
                 </div>

@@ -3,7 +3,7 @@ const makeCall = () => {
 };
 
 const openWebSite = () => {
-  window.location.href = "https://sreenadh2000.github.io/arul-digitals/";
+  window.open("https://www.aruldigitals.com", "_blank", "noopener");
 };
 const openWhatsApp = (productName, comeFrom = "") => {
   const phone = "919014364411";
@@ -31,7 +31,7 @@ const openGoogleMaps = () => {
 };
 
 const sendEmail = () => {
-  const email = "aruldigitalschittoor@gmail.com.com";
+  const email = "aruldigitalschittoor@gmail.com";
   const subject = encodeURIComponent("Inquiry about Printing Services");
   const body = encodeURIComponent(
     "Hello, I would like to know more about your printing solutions."

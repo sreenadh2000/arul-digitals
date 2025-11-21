@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import {
-  Printer,
   Clock,
   MapPin,
   Globe,
@@ -14,8 +13,7 @@ import {
   openGoogleMaps,
   openWebSite,
 } from "../components/methods/ContactMethods";
-// const imgPath = `${import.meta.env.BASE_URL}/assets/images/main/logo-name.png`;
-const imgPath = `/assets/images/main/logo-name.png`;
+const imgPath = `/assets/images/main/arul-digitals-logo.webp`;
 function Footer() {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
@@ -29,11 +27,7 @@ function Footer() {
             <div className="col-lg-4 col-md-6 col-12 mb-4">
               <div className="footer-section">
                 <div className="footer-brand">
-                  {/* <div className="footer-logo">
-                    <Printer size={36} />
-                  </div>
-                  <span className="footer-brand-name">Arul Digitals</span> */}
-                  <img src={imgPath} alt="logo-image" className="" />
+                  <img src={imgPath} alt="arul-digital-logo" />
                 </div>
 
                 <p className="footer-description">
@@ -46,6 +40,7 @@ function Footer() {
                 <div className="social-media">
                   <a
                     //  href="https://www.facebook.com/sreenadh.bathalakuri/"
+                    href="javascript:void(0)"
                     className="social-link"
                     aria-label="Facebook"
                   >
@@ -53,6 +48,7 @@ function Footer() {
                   </a>
                   <a
                     //  href="https://x.com/SBathalaku89795"
+                    href="javascript:void(0)"
                     className="social-link"
                     aria-label="LinkedIn"
                   >
@@ -60,6 +56,7 @@ function Footer() {
                   </a>
                   <a
                     //  href="https://www.instagram.com/harshapuranam/"
+                    href="javascript:void(0)"
                     className="social-link"
                     aria-label="Instagram"
                   >

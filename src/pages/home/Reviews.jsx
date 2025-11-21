@@ -8,8 +8,8 @@ const CustomerReviews = [
     id: 1,
     review:
       "Excellent service with quick turnaround time. The team, especially Manjunath and Charan, ensured our prints were delivered perfectly within a few hours. Very professional, cost-effective, and reliable service overall.",
-    name: "Jayadev Galla",
-    working: "Amara Raja Energy & Mobility",
+    name: "Maria Roy",
+    working: "Doctor",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const CustomerReviews = [
     id: 3,
     review:
       "Great experience with their service. The team is customer-friendly, affordable, and delivers quality prints on time. Perfect choice for anyone looking for fast, reliable, and professional printing solutions.",
-    name: "Bahnu",
+    name: "Bhanu",
     working: "Software Engineer",
   },
 ];
@@ -45,6 +45,12 @@ export default function Reviews() {
                   768: { slidesPerView: 1 }, // Tablet
                   0: { slidesPerView: 1 }, // Mobile
                 }}
+                // 🚀 CRITICAL PERFORMANCE FIXES
+                observer={false}
+                observeParents={false}
+                observeSlideChildren={false}
+                watchSlidesProgress={false}
+                watchOverflow={true}
               >
                 {CustomerReviews.map((item) => (
                   <SwiperSlide key={item.id}>

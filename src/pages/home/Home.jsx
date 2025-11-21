@@ -1,17 +1,18 @@
 import Hero from "./Hero";
-import Products from "./Products";
-import Impacts from "./Impacts";
-import MachineSwiper from "./MachineSwiper";
-import BrandAndVideo from "./BrandAndVideo";
-import WhatNewAndReviews from "./WhatNewAndReviews";
 import "@styles/home.scss";
+import { lazy, Suspense } from "react";
+import Loader from "../../components/common/Loader";
+// Lazy-load BELOW-THE-FOLD sections
+const Products = lazy(() => import("./Products"));
+const Impacts = lazy(() => import("./Impacts"));
+const MachineSwiper = lazy(() => import("./MachineSwiper"));
+const BrandAndVideo = lazy(() => import("./BrandAndVideo"));
+const WhatNewAndReviews = lazy(() => import("./WhatNewAndReviews"));
 
-function Home(params) {
+function Home() {
   return (
     <div className="home-page">
-      {/* Hero Section */}
       <Hero />
-      {/* Products Section */}
       <Products />
       <Impacts />
       <MachineSwiper />

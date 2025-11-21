@@ -18,6 +18,7 @@ export default function ContactForm(params) {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [serverErr, setServerErr] = useState(false);
   const validateForm = () => {
     const newErrors = {};
 
@@ -72,43 +73,33 @@ export default function ContactForm(params) {
     }
 
     setIsSubmitting(true);
-    console.log(form.current);
     // Simulate API call
-    // emailjs
-    //   .sendForm(service_Id, template_Id, form.current, {
-    //     publicKey: public_key,
-    //   })
-    //   .then(
-    //     () => {
-    //       console.log("SUCCESS!");
-    //       setIsSubmitting(false);
-    //       setIsSubmitted(true);
-    //       setFormData({
-    //         firstName: "",
-    //         lastName: "",
-    //         email: "",
-    //         phone: "",
-    //         message: "",
-    //       });
-    //     },
-    //     (error) => {
-    //       console.log("FAILED...", error.text);
-    //     }
-    //   );
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
-
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
+    emailjs
+      .sendForm(service_Id, template_Id, form.current, {
+        publicKey: public_key,
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setIsSubmitting(false);
+          setIsSubmitted(true);
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+          // Reset success message after 5 seconds
+          setTimeout(() => setIsSubmitted(false), 5000);
+        },
+        (error) => {
+          setServerErr(true);
+          console.log("FAILED...", error.text);
+          // Reset success message after 5 seconds
+          setTimeout(() => setServerErr(false), 5000);
+        }
+      );
   };
 
   const getFieldClass = (fieldName) => {
@@ -133,6 +124,12 @@ export default function ContactForm(params) {
                       <div className="success-message">
                         <strong>Thank you!</strong> Your message has been sent
                         successfully. We'll get back to you soon.
+                      </div>
+                    )}
+                    {serverErr && (
+                      <div className="error-message">
+                        <strong>Sorry !</strong> Your message not sent. Because
+                        of the Server issue.
                       </div>
                     )}
                     <form ref={form} onSubmit={handleSubmit} noValidate>

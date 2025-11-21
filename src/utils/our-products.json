@@ -1,37 +1,37 @@
 [
  {
     "id": 1,
-    "image": "assets/images/products/png/Calender Print.png",
+    "image": "assets/images/products/png/calender-print.webp",
     "name": "Calenders",
     "description": "Custom calendars showcasing your brand for effective, year-round promotion. "
   },
   {
     "id": 2,
-    "image": "assets/images/products/png/Corporate Gifts with Prints.png",
+    "image": "assets/images/products/png/corporate-gifts-with-prints.webp",
     "name": "Corporate Gifts",
     "description": "A corporate gift is a gift given by a company to an employee, client, or partner"
   },
   {
     "id": 3,
-    "image": "assets/images/products/png/Photo Frame.png",
+    "image": "assets/images/products/png/photo-frame.webp",
     "name": "Photo Frame",
     "description": "A Picture frame is a protective and decorative edging for a picture, such as a painting or photograph "
   },
   {
     "id": 4,
-    "image": "assets/images/products/png/Pen with Print.png",
+    "image": "assets/images/products/png/pen-with-print.webp",
     "name": "Pen with Print",
     "description": "Pen with printing is a service that allows you to customize print your name, logo, or artwork "
   },
   {
     "id": 5,
-    "image": "assets/images/products/png/Fabric Banner.png",
+    "image": "assets/images/products/png/fabric-banner.webp",
     "name": "Banners",
     "description": "Durable banners for indoor and outdoor use with weather-resistant materials."
   },
   {
     "id": 6,
-    "image": "assets/images/products/png/Stickers.png",
+    "image": "assets/images/products/png/stickers.webp",
     "name": "Stickers",
     "description": "A sticker is a printed label made of paper, plastic, or vinyl, used on products, packaging, or surfaces."
   }
