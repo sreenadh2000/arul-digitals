@@ -45,12 +45,6 @@ function Hero() {
                 }}
                 slidesPerView={1}
                 loop={true} // repeat slides
-                // 🚀 CRITICAL PERFORMANCE FIXES
-                observer={false}
-                observeParents={false}
-                observeSlideChildren={false}
-                watchSlidesProgress={false}
-                watchOverflow={true}
               >
                 {customImages.map((image, index) => (
                   <SwiperSlide key={index}>

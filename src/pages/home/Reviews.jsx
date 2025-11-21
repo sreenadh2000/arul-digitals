@@ -45,12 +45,6 @@ export default function Reviews() {
                   768: { slidesPerView: 1 }, // Tablet
                   0: { slidesPerView: 1 }, // Mobile
                 }}
-                // 🚀 CRITICAL PERFORMANCE FIXES
-                observer={false}
-                observeParents={false}
-                observeSlideChildren={false}
-                watchSlidesProgress={false}
-                watchOverflow={true}
               >
                 {CustomerReviews.map((item) => (
                   <SwiperSlide key={item.id}>

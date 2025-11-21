@@ -46,15 +46,6 @@ export default function MachineSwiper() {
           768: { slidesPerView: 2 }, // Tablet
           0: { slidesPerView: 1 }, // Mobile
         }}
-        // 🚀 CRITICAL PERFORMANCE FIXES
-        observer={false}
-        observeParents={false}
-        observeSlideChildren={false}
-        watchSlidesProgress={false}
-        watchOverflow={true}
-        // 🚀 Prevent Swiper from recalculating slide size repeatedly
-        preloadimages={false.toString()}
-        lazy={true.toString()}
       >
         {machines.map((item) => (
           <SwiperSlide key={item.id}>

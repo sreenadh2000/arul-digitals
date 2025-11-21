@@ -26,12 +26,6 @@ function Products() {
               768: { slidesPerView: 2 }, // Tablet
               0: { slidesPerView: 1 }, // Mobile
             }}
-            // 🚀 CRITICAL PERFORMANCE FIXES
-            observer={false}
-            observeParents={false}
-            observeSlideChildren={false}
-            watchSlidesProgress={false}
-            watchOverflow={true}
           >
             {products.map((product) => (
               <SwiperSlide key={product.id}>

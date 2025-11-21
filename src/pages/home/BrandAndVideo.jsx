@@ -78,12 +78,6 @@ export default function BrandAndVideo(params) {
                 768: { slidesPerView: 3 }, // Tablet
                 0: { slidesPerView: 1 }, // Mobile
               }}
-              // 🚀 CRITICAL PERFORMANCE FIXES
-              observer={false}
-              observeParents={false}
-              observeSlideChildren={false}
-              watchSlidesProgress={false}
-              watchOverflow={true}
             >
               {images.map((item) => (
                 <SwiperSlide key={item.id}>
