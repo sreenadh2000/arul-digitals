@@ -50,7 +50,7 @@ export default function MachineSwiper() {
         {machines.map((item) => (
           <SwiperSlide key={item.id}>
             <div className="image-card">
-              <img src={item.src} alt={item.text} />
+              <img src={item.src} alt={item.text} loading="eager" />
               <div className="overlay">
                 <h2 className="d-block">{item.heading}</h2>
                 <p>{item.text}</p>

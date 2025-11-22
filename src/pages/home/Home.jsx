@@ -13,11 +13,29 @@ function Home() {
   return (
     <div className="home-page">
       <Hero />
-      <Products />
-      <Impacts />
-      <MachineSwiper />
-      <BrandAndVideo />
-      <WhatNewAndReviews />
+      <Suspense fallback={<Loader />}>
+        {" "}
+        <Products />
+      </Suspense>
+
+      <Suspense fallback={<Loader />}>
+        {" "}
+        <Impacts />
+      </Suspense>
+
+      <Suspense fallback={<Loader />}>
+        {" "}
+        <MachineSwiper />
+      </Suspense>
+
+      <Suspense fallback={<Loader />}>
+        <BrandAndVideo />
+      </Suspense>
+
+      <Suspense fallback={<Loader />}>
+        {" "}
+        <WhatNewAndReviews />
+      </Suspense>
     </div>
   );
 }

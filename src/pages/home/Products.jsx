@@ -31,7 +31,11 @@ function Products() {
               <SwiperSlide key={product.id}>
                 <div className="product-card">
                   <div className="product-image">
-                    <img src={`/${product.image}`} alt={product.name} />
+                    <img
+                      src={`/${product.image}`}
+                      alt={product.name}
+                      loading="eager"
+                    />
                   </div>
                   <div className="product-content">
                     <h3 className="product-name">{product.name}</h3>

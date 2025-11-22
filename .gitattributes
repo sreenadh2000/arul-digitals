@@ -1,1 +1,15 @@
-* text eol=lf
+# Auto-detect text files and normalize to LF in repo
+* text=auto
+
+# Keep images as binary (very important to avoid corruption)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+
+# Fonts
+*.ttf binary
+*.woff binary
+*.woff2 binary

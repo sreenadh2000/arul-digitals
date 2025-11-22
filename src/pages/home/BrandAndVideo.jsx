@@ -6,7 +6,7 @@ import { openWhatsApp } from "../../components/methods/ContactMethods";
 const images = [
   {
     id: 1,
-    src: `/assets/images/brands/amaraRaja.webp`,
+    src: `/assets/images/brands/amararaja.webp`,
     text: "Amara Raja",
   },
   {
@@ -50,7 +50,7 @@ const videoFeatures = [
   "Quality guarantee on all printing services",
   "Eco-friendly printing options available",
 ];
-const imgPath = `/assets/images/main/Arul-digitals-front-side.webp`;
+const imgPath = `/assets/images/main/arul-digitals-front-side.webp`;
 export default function BrandAndVideo(params) {
   return (
     <>
@@ -82,7 +82,7 @@ export default function BrandAndVideo(params) {
               {images.map((item) => (
                 <SwiperSlide key={item.id}>
                   <div className="image-card">
-                    <img src={item.src} alt={item.text} />
+                    <img src={item.src} alt={item.text} loading="eager" />
                   </div>
                 </SwiperSlide>
               ))}

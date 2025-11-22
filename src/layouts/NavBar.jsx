@@ -35,7 +35,7 @@ function NavBar() {
             {/* Logo and Brand */}
             <div className="navbar-brand d-flex align-items-center">
               <div className="logo d-flex align-items-center justify-content-center">
-                <img src={imgPath} alt="arul digitals logo" />
+                <img src={imgPath} alt="arul digitals logo" loading="eager" />
               </div>
             </div>
 

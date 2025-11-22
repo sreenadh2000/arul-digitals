@@ -18,7 +18,7 @@ const whoWeAre = [
   },
 ];
 export default function Ourjounrney(params) {
-  const imgPath = `/assets/images/main/Arul-digitals-front-side.webp`;
+  const imgPath = `/assets/images/main/arul-digitals-front-side.webp`;
   return (
     <>
       <section className="our-jorney">

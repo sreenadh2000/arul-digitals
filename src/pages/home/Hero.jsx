@@ -49,7 +49,11 @@ function Hero() {
                 {customImages.map((image, index) => (
                   <SwiperSlide key={index}>
                     <div key={index} className="image-slide">
-                      <img src={image} alt={`Printing service ${index + 1}`} />
+                      <img
+                        src={image}
+                        alt={`Printing service ${index + 1}`}
+                        loading="eager"
+                      />
                     </div>
                   </SwiperSlide>
                 ))}
